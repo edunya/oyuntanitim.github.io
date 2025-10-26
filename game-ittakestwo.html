@@ -1,39 +1,92 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <title>It Takes Two</title>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="It Takes Two oyun detayları, sistem gereksinimleri ve fragman.">
+  <meta name="keywords" content="oyun, tanıtım, inceleme, fragman, sistem gereksinimleri">
+  <title>It Takes Two</title>
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
   <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .info-badges span{display:inline-block;margin:4px 6px;padding:6px 10px;border:1px solid rgba(255,255,255,.2);border-radius:999px;font-size:12px;color:#ddd}
+    .btn-row{gap:10px}
+    .shadow-hero{box-shadow:0 10px 30px rgba(0,0,0,.35)}
+  </style>
 </head>
 <body>
   <header class="header-section">
     <div class="header-bar-warp d-flex">
-      <a href="index.html" class="site-logo"><img src="img/logo.png" alt=""></a>
+      <a href="index.html" class="site-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
       <nav class="top-nav-area w-100">
         <ul class="main-menu primary-menu">
           <li><a href="index.html">Ana Sayfa</a></li>
           <li><a href="games.html">Oyunlar</a></li>
+          <li><a href="duyurular.html">Duyurular</a></li>
+          <li><a href="istatistikler.html">İstatistikler</a></li>
+          <li><a href="about.html">Hakkımızda</a></li>
+          <li><a href="contact.html">İletişim</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <section class="games-single-page">
-    <div class="container">
-      <img src="img/games/ittakestwo.jpg" class="img-fluid rounded mb-4" alt="It Takes Two">
-      <h4>Oynanış Özeti</h4>
-      <p>İki karakterin iş birliğiyle ilerlediği, eğlenceli ve duygusal bir macera. Oyuncular, çeşitli bulmacaları çözmek için birlikte çalışıyor.</p>
-      <h4>Sistem Gereksinimleri</h4>
-      <ul>
-        <li>İşletim Sistemi: Windows 10 64-bit</li>
-        <li>İşlemci: Intel Core i5-3570K / AMD FX-8350</li>
-        <li>Bellek: 8 GB RAM</li>
-        <li>Ekran Kartı: GTX 660 / Radeon R9 290</li>
-        <li>Depolama: 50 GB</li>
-      </ul>
-      <h4>Fragman</h4>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/ohClxMmNLQQ" allowfullscreen></iframe>
+
+  <section class="page-top-section set-bg" data-setbg="img/page-top-bg/1.jpg">
+    <div class="page-info">
+      <h2>It Takes Two</h2>
+      <div class="site-breadcrumb">
+        <a href="index.html">Ana Sayfa</a> / <a href="games.html">Oyunlar</a> / <span>It Takes Two</span>
+      </div>
     </div>
   </section>
+
+  <section class="games-single-page">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-between mb-3 btn-row">
+        <a href="games.html" class="site-btn">← Oyun Listesine Dön</a>
+        <a href="https://store.steampowered.com/app/1426210/It_Takes_Two/" target="_blank" class="site-btn">Steam'de Gör</a>
+      </div>
+
+      <img src="img/games/ittakestwo.jpg" class="img-fluid rounded mb-4 shadow-hero" alt="It Takes Two">
+
+      <div class="info-badges mb-3">
+        <span>Tür: Kooperatif Macera</span><span>Geliştirici: Hazelight</span><span>Platform: PC/PS/Xbox</span>
+      </div>
+
+      <h4>Oynanış Özeti</h4>
+      <p>İki karakterin iş birliğiyle ilerlediği, yaratıcı bulmaca-mekanikleri ve duygusal anlatımıyla öne çıkan bir macera oyunu. Her bölüm farklı bir oyun fikri üzerine kurulu mini-mekanikler içerir.</p>
+
+      <h4>Sistem Gereksinimleri</h4>
+      <ul>
+        <li>İşletim Sistemi: Windows 10 64-bit</li><li>İşlemci: Intel Core i5-3570K / AMD FX-8350</li><li>Bellek: 8 GB RAM</li><li>Ekran Kartı: NVIDIA GTX 660 / AMD R9 290</li><li>Depolama: 50 GB</li>
+      </ul>
+
+      <h4>Fragman</h4>
+      <div class="embed-responsive embed-responsive-16by9 mb-4">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ohClxMmNLQQ" allowfullscreen title="It Takes Two fragman"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-section">
+    <div class="container">
+      <a href="index.html" class="footer-logo"><img src="img/logo.png" alt=""></a>
+      <ul class="main-menu footer-menu">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="games.html">Oyunlar</a></li>
+        <li><a href="about.html">Hakkımızda</a></li>
+        <li><a href="contact.html">İletişim</a></li>
+      </ul>
+      <div class="copyright">© 2025 OyunTanıtım | Web Tasarımı Dersi Projesi</div>
+    </div>
+  </footer>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.slicknav.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.sticky-sidebar.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

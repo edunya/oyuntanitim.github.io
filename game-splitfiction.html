@@ -1,31 +1,92 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <title>Split Fiction</title>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Split Fiction oyun detayları ve Steam bağlantısı.">
+  <meta name="keywords" content="oyun, tanıtım, inceleme, fragman, sistem gereksinimleri">
+  <title>Split Fiction</title>
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
   <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .info-badges span{display:inline-block;margin:4px 6px;padding:6px 10px;border:1px solid rgba(255,255,255,.2);border-radius:999px;font-size:12px;color:#ddd}
+    .btn-row{gap:10px}
+    .shadow-hero{box-shadow:0 10px 30px rgba(0,0,0,.35)}
+  </style>
 </head>
 <body>
   <header class="header-section">
     <div class="header-bar-warp d-flex">
-      <a href="index.html" class="site-logo"><img src="img/logo.png" alt=""></a>
+      <a href="index.html" class="site-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
       <nav class="top-nav-area w-100">
         <ul class="main-menu primary-menu">
           <li><a href="index.html">Ana Sayfa</a></li>
           <li><a href="games.html">Oyunlar</a></li>
+          <li><a href="duyurular.html">Duyurular</a></li>
+          <li><a href="istatistikler.html">İstatistikler</a></li>
+          <li><a href="about.html">Hakkımızda</a></li>
+          <li><a href="contact.html">İletişim</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <section class="games-single-page">
-    <div class="container">
-      <img src="img/games/splitfiction.jpg" class="img-fluid rounded mb-4" alt="Split Fiction">
-      <h4>Oyun Özeti</h4>
-      <p>Split Fiction, iki yazarın hayal gücüyle oluşturdukları paralel dünyalarda sıkışıp kaldıkları sürükleyici bir hikâye anlatır. Gerçeklik ile kurgu arasındaki çizgi gittikçe bulanıklaşır.</p>
-      <h4>Steam Sayfası</h4>
-      <a href="https://store.steampowered.com/app/2001120/Split_Fiction/" target="_blank" class="site-btn mt-2">Steam'de Gör</a>
+
+  <section class="page-top-section set-bg" data-setbg="img/page-top-bg/1.jpg">
+    <div class="page-info">
+      <h2>Split Fiction</h2>
+      <div class="site-breadcrumb">
+        <a href="index.html">Ana Sayfa</a> / <a href="games.html">Oyunlar</a> / <span>Split Fiction</span>
+      </div>
     </div>
   </section>
+
+  <section class="games-single-page">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-between mb-3 btn-row">
+        <a href="games.html" class="site-btn">← Oyun Listesine Dön</a>
+        <a href="https://store.steampowered.com/app/2001120/Split_Fiction/" target="_blank" class="site-btn">Steam'de Gör</a>
+      </div>
+
+      <img src="img/games/splitfiction.jpg" class="img-fluid rounded mb-4 shadow-hero" alt="Split Fiction">
+
+      <div class="info-badges mb-3">
+        <span>Tür: Aksiyon / Macera</span><span>Platform: PC</span>
+      </div>
+
+      <h4>Oynanış Özeti</h4>
+      <p>İki yazarın zihinlerinden doğan paralel dünyalarda geçen, gerçeklik ile kurgu arasındaki çizgiyi sorgulatan bir macera. Bölümler arası tematik çeşitlilik sunar.</p>
+
+      <h4>Sistem Gereksinimleri</h4>
+      <ul>
+        <li>İşletim Sistemi: Windows 10 64-bit</li><li>İşlemci: Dört çekirdekli</li><li>Bellek: 8 GB RAM</li><li>Ekran Kartı: GTX 970 seviyesi</li><li>Depolama: 25 GB</li>
+      </ul>
+
+      <h4>Fragman</h4>
+      <div class="embed-responsive embed-responsive-16by9 mb-4">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5gDTTpKjHf0" allowfullscreen title="Split Fiction fragman"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-section">
+    <div class="container">
+      <a href="index.html" class="footer-logo"><img src="img/logo.png" alt=""></a>
+      <ul class="main-menu footer-menu">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="games.html">Oyunlar</a></li>
+        <li><a href="about.html">Hakkımızda</a></li>
+        <li><a href="contact.html">İletişim</a></li>
+      </ul>
+      <div class="copyright">© 2025 OyunTanıtım | Web Tasarımı Dersi Projesi</div>
+    </div>
+  </footer>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.slicknav.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.sticky-sidebar.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
