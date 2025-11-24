@@ -16,13 +16,16 @@
   <link rel="stylesheet" href="css/animate.css"/>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
+
 <body>
-  <!-- Sayfa Yüklenme Ekranı -->
+
+  <!-- Yüklenme Ekranı -->
   <div id="preloder"><div class="loader"></div></div>
 
   <!-- Üst Menü -->
   <header class="header-section">
     <div class="header-warp">
+
       <div class="header-social d-flex justify-content-end">
         <p>Bizi Takip Et:</p>
         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -30,28 +33,84 @@
         <a href="#"><i class="fa fa-instagram"></i></a>
         <a href="#"><i class="fa fa-youtube"></i></a>
       </div>
+
       <div class="header-bar-warp d-flex">
         <!-- Logo -->
         <a href="index.html" class="site-logo">
           <img src="img/logo.png" alt="OyunTanıtım">
         </a>
+
+        <!-- NAVIGATION -->
         <nav class="top-nav-area w-100">
           <ul class="main-menu primary-menu">
+
             <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="games.html">Oyunlar</a></li>
+
+            <!-- Oyunlar Dropdown -->
+            <li>
+              <a href="#">Oyunlar</a>
+              <ul class="sub-menu">
+
+                <li><a href="games.html">Tüm Oyunlar</a></li>
+
+                <li>
+                  <a href="#">Aksiyon</a>
+                  <ul class="sub-menu">
+                    <li><a href="game-eldenring.html">Elden Ring</a></li>
+                    <li><a href="game-hades2.html">Hades II</a></li>
+                    <li><a href="game-splitfiction.html">Split Fiction</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#">Macera</a>
+                  <ul class="sub-menu">
+                    <li><a href="game-ittakestwo.html">It Takes Two</a></li>
+                    <li><a href="game-splitfiction.html">Split Fiction</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#">Kooperatif</a>
+                  <ul class="sub-menu">
+                    <li><a href="game-ittakestwo.html">It Takes Two</a></li>
+                    <li><a href="game-helldivers2.html">Helldivers II</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#">FPS</a>
+                  <ul class="sub-menu">
+                    <li><a href="game-helldivers2.html">Helldivers II</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#">RPG</a>
+                  <ul class="sub-menu">
+                    <li><a href="game-eldenring.html">Elden Ring</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </li>
+
             <li><a href="duyurular.html">Duyurular</a></li>
             <li><a href="istatistikler.html">İstatistikler</a></li>
             <li><a href="about.html">Hakkımızda</a></li>
             <li><a href="contact.html">İletişim</a></li>
+
           </ul>
         </nav>
+
       </div>
     </div>
   </header>
 
-  <!-- Ana Slider -->
+  <!-- Slider -->
   <section class="hero-section overflow-hidden">
     <div class="hero-slider owl-carousel">
+
       <div class="hero-item set-bg d-flex align-items-center justify-content-center text-center" data-setbg="img/slider-bg-1.jpg">
         <div class="container">
           <h2 style="font-size:60px;">Yeni Nesil Oyun Deneyimi</h2>
@@ -59,6 +118,7 @@
           <a href="games.html" class="site-btn">Oyunları Keşfet <img src="img/icons/double-arrow.png" alt="#"/></a>
         </div>
       </div>
+
       <div class="hero-item set-bg d-flex align-items-center justify-content-center text-center" data-setbg="img/slider-bg-2.jpg">
         <div class="container">
           <h2 style="font-size:60px;">En Güncel Oyunlar</h2>
@@ -66,75 +126,75 @@
           <a href="duyurular.html" class="site-btn">Duyurulara Git <img src="img/icons/double-arrow.png" alt="#"/></a>
         </div>
       </div>
+
     </div>
   </section>
 
   <!-- Tanıtım Alanı -->
   <section class="intro-section">
-  <div class="container">
-    <div class="row">
+    <div class="container">
+      <div class="row">
 
-      <!-- Hades 2 -->
-      <div class="col-md-4">
-        <div class="intro-text-box text-box text-white">
-          <div class="top-meta">24.10.2025 / <a href="games.html">Yeni Çıkışlar</a></div>
-          <h3>Hades 2 – Yeraltına Yeni Dönüş</h3>
-          <p>Melinoë’nin karanlık güçlere karşı verdiği mücadele, mitoloji ve büyü dolu yepyeni bir rogue-like deneyimi sunuyor.</p>
-          <a href="games.html" class="read-more">Daha Fazla Oku <img src="img/icons/double-arrow.png" alt="#"/></a>
+        <!-- Hades 2 -->
+        <div class="col-md-4">
+          <div class="intro-text-box text-box text-white">
+            <div class="top-meta">24.10.2025 / <a href="games.html">Yeni Çıkışlar</a></div>
+            <h3>Hades 2 – Yeraltına Yeni Dönüş</h3>
+            <p>Mitoloji ve büyü dolu yepyeni bir rogue-like deneyimi.</p>
+            <a href="games.html" class="read-more">Daha Fazla Oku <img src="img/icons/double-arrow.png" alt="#"/></a>
+          </div>
         </div>
-      </div>
 
-      <!-- Helldivers 2 -->
-      <div class="col-md-4">
-        <div class="intro-text-box text-box text-white">
-          <div class="top-meta">22.10.2025 / <a href="game-single.html">İnceleme</a></div>
-          <h3>Helldivers 2 – Galaksi İçin Birlik Ol</h3>
-          <p>Yoğun co-op aksiyon, kaos ve stratejiyi bir araya getiren Helldivers 2, takım oyununu doruk noktaya taşıyor.</p>
-          <a href="game-single.html" class="read-more">İncele <img src="img/icons/double-arrow.png" alt="#"/></a>
+        <!-- Helldivers 2 -->
+        <div class="col-md-4">
+          <div class="intro-text-box text-box text-white">
+            <div class="top-meta">22.10.2025 / İnceleme</div>
+            <h3>Helldivers 2 – Galaksi İçin Birlik Ol</h3>
+            <p>Yoğun co-op aksiyon, kaos ve stratejiyi bir araya getiren bir deneyim.</p>
+            <a href="game-helldivers2.html" class="read-more">İncele <img src="img/icons/double-arrow.png" alt="#"/></a>
+          </div>
         </div>
-      </div>
 
-      <!-- Shadow of the Erdtree -->
-      <div class="col-md-4">
-        <div class="intro-text-box text-box text-white">
-          <div class="top-meta">20.10.2025 / <a href="istatistikler.html">Editörün Seçimi</a></div>
-          <h3>Shadow of the Erdtree – Yeni Bir Diyar</h3>
-          <p>Elden Ring’in dev genişlemesi yeni bölgeler, bosslar ve keşif odaklı bir dünya ile yılın en büyük yapımlarından biri.</p>
-          <a href="istatistikler.html" class="read-more">İstatistikleri Göster <img src="img/icons/double-arrow.png" alt="#"/></a>
+        <!-- Shadow of the Erdtree -->
+        <div class="col-md-4">
+          <div class="intro-text-box text-box text-white">
+            <div class="top-meta">20.10.2025 / Editörün Seçimi</div>
+            <h3>Shadow of the Erdtree – Yeni Bir Diyar</h3>
+            <p>Elden Ring’in dev genişlemesi yeni bölgeler ve bosslarla dolu.</p>
+            <a href="istatistikler.html" class="read-more">İstatistikleri Göster <img src="img/icons/double-arrow.png" alt="#"/></a>
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
-  </div>
-</section>
-
-
+  </section>
 
   <!-- Video Tanıtımı -->
   <section class="intro-video-section d-flex align-items-end"
-         style='background-image:url("https://i.ytimg.com/vi_webp/qLZenOn7WUo/maxresdefault.webp");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                min-height: 800px;'>
-  <div class="container text-center">
-    <iframe width="760" height="430"
-            src="https://www.youtube.com/embed/qLZenOn7WUo"
-            title="Elden Ring - Shadow of the Erdtree"
-            frameborder="0"
-            allowfullscreen></iframe>
-    <div class="video-text mt-3">
-      <h2>Haftanın Oyunu: Shadow of the Erdtree</h2>
-      <p>Yeni DLC Shadow of the Erdtree ile keşfedilmeyi bekleyen yepyeni ve koca bir dünya.</p>
+           style='background-image:url("https://i.ytimg.com/vi_webp/qLZenOn7WUo/maxresdefault.webp");
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  min-height: 800px;'>
+    <div class="container text-center">
+      <iframe width="760" height="430"
+              src="https://www.youtube.com/embed/qLZenOn7WUo"
+              title="Elden Ring - Shadow of the Erdtree"
+              frameborder="0"
+              allowfullscreen></iframe>
+      <div class="video-text mt-3">
+        <h2>Haftanın Oyunu: Shadow of the Erdtree</h2>
+        <p>Yeni DLC ile keşfedilmeyi bekleyen koca bir dünya.</p>
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Footer -->
   <footer class="footer-section">
     <div class="container">
+
       <a href="index.html" class="footer-logo"><img src="img/logo.png" alt=""></a>
+
       <ul class="main-menu footer-menu">
         <li><a href="index.html">Ana Sayfa</a></li>
         <li><a href="games.html">Oyunlar</a></li>
@@ -143,15 +203,18 @@
         <li><a href="about.html">Hakkımızda</a></li>
         <li><a href="contact.html">İletişim</a></li>
       </ul>
+
       <div class="footer-social d-flex justify-content-center">
         <a href="#"><i class="fa fa-facebook"></i></a>
         <a href="#"><i class="fa fa-twitter"></i></a>
         <a href="#"><i class="fa fa-instagram"></i></a>
         <a href="#"><i class="fa fa-youtube"></i></a>
       </div>
+
       <div class="copyright">
         © 2025 OyunTanıtım | TBL303 Web Tasarımı Dersi Projesi
       </div>
+
     </div>
   </footer>
 
@@ -163,5 +226,6 @@
   <script src="js/jquery.sticky-sidebar.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/main.js"></script>
+
 </body>
 </html>
