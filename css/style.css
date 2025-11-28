@@ -1766,3 +1766,52 @@ ol {
 		margin-bottom: 20px;
 	}
 }
+
+/* ================== OYUN DETAY SAYFALARI - ÖZEL STİLLER ================== */
+
+.info-badges span{
+  display:inline-block;
+  margin:4px 6px;
+  padding:6px 10px;
+  background:rgba(255,255,255,.06);
+  border-radius:999px;
+  font-size:12px;
+  color:#ddd;
+}
+
+.btn-row{
+  gap:10px;
+}
+
+.shadow-hero{
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+/* Fiyat kutusu */
+.game-price-box{
+  background:rgba(10,10,20,.9);
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:12px;
+  padding:14px 18px;
+  margin-bottom:20px;
+}
+
+.game-price-box h5{
+  margin:0 0 6px;
+  font-size:18px;
+  color:#fff;
+}
+
+.game-price-box p{
+  margin:0;
+  font-size:14px;
+  color:#ccc;
+}
+
+.game-price-box small{
+  display:block;
+  margin-top:4px;
+  font-size:12px;
+  color:#999;
+}
+
