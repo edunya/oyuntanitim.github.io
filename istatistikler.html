@@ -3,138 +3,271 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oyun İstatistikleri</title>
+  <title>OyunTanıtım - Oyun İstatistikleri</title>
+  <meta name="description" content="OyunTanıtım platformunda yer alan oyunlar için örnek istatistikler ve grafikler.">
+  <link href="img/favicon.ico" rel="shortcut icon"/>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+
+  <!-- Preloader -->
+  <div id="preloder"><div class="loader"></div></div>
+
+  <!-- Üst Menü -->
   <header class="header-section">
-    <div class="header-bar-warp d-flex">
-      <a href="index.html" class="site-logo"><img src="img/logo.png" alt=""></a>
-      <nav class="top-nav-area w-100">
-        <ul class="main-menu primary-menu">
-          <li><a href="index.html">Ana Sayfa</a></li>
-          <li><a href="games.html">Oyunlar</a></li>
-          <li class="active"><a href="istatistikler.html">İstatistikler</a></li>
-          <li><a href="about.html">Hakkımızda</a></li>
-          <li><a href="contact.html">İletişim</a></li>
-        </ul>
-      </nav>
+    <div class="header-warp">
+
+      <div class="header-social d-flex justify-content-end">
+        <p>Bizi Takip Et:</p>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
+
+      <div class="header-bar-warp d-flex">
+        <a href="index.html" class="site-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
+        <nav class="top-nav-area w-100">
+          <ul class="main-menu primary-menu">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="games.html">Oyunlar</a></li>
+            <li><a href="duyurular.html">Duyurular</a></li>
+            <li class="active"><a href="istatistikler.html">İstatistikler</a></li>
+            <li><a href="hakkinda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </nav>
+      </div>
+
     </div>
   </header>
 
-  <section class="page-top-section set-bg" data-setbg="img/page-top-bg/1.jpg">
+  <!-- Sayfa Üst Başlık -->
+  <section class="page-top-section set-bg" data-setbg="img/page-top-bg/2.jpg">
     <div class="page-info">
       <h2>Oyun İstatistikleri</h2>
       <div class="site-breadcrumb">
-        <a href="index.html">Ana Sayfa</a> / <span>İstatistikler</span>
+        <a href="index.html">Ana Sayfa</a> /
+        <span>İstatistikler</span>
       </div>
     </div>
   </section>
 
-  <section class="statistics-section py-5">
-    <div class="container text-center">
-      <h3 class="mb-4">Genel Bakış</h3>
-      <div class="row">
+  <!-- İstatistikler İçerik -->
+  <section class="spad" style="background:#0b0b15;">
+    <div class="container">
+
+      <div class="section-title text-center text-white">
+        <h2>Örnek Oyun İstatistikleri</h2>
+        <p>
+          Bu sayfada, OyunTanıtım’da yer alan seçili oyunlar için
+          <strong>örnek puan, tür dağılımı ve platform tercihleri</strong> görselleştirilmiştir.
+        </p>
+        <p style="font-size:13px; color:#aaa;">
+          Not: Aşağıdaki veriler <strong>tamamen senaryo amaçlıdır</strong> ve gerçek oyuncu sayılarını yansıtmaz.
+        </p>
+      </div>
+
+      <!-- Grafikler Satırı -->
+      <div class="row text-white mb-4">
         <div class="col-md-4 mb-4">
+          <h5 class="mb-3">Oyun Puanları</h5>
           <canvas id="ratingChart"></canvas>
         </div>
         <div class="col-md-4 mb-4">
+          <h5 class="mb-3">Türlere Göre Oyun Dağılımı</h5>
           <canvas id="genreChart"></canvas>
         </div>
         <div class="col-md-4 mb-4">
+          <h5 class="mb-3">Platform Tercihleri</h5>
           <canvas id="platformChart"></canvas>
         </div>
       </div>
 
-      <h4 class="mt-5 mb-3">Oyun Tablosu</h4>
+      <!-- Kısa Açıklama Kartı -->
+      <div class="row mb-5">
+        <div class="col-lg-12">
+          <div class="p-3 mb-3" style="background:rgba(255,255,255,0.03); border-radius:10px; border:1px solid rgba(255,255,255,0.05);">
+            <p style="font-size:14px; color:#ccc; margin-bottom:0;">
+              Grafikte kullanılan puanlar; Metacritic, Steam kullanıcı puanları ve genel eleştirmen yorumları
+              referans alınarak yaklaşık değerler üzerinden belirlenmiştir. Oyuncu sayıları ise milyon (M)
+              cinsinden farazi olarak hesaplanmıştır.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Oyun Tablosu -->
+      <h4 class="mt-2 mb-3 text-white">Oyun Tablosu (Örnek Veriler)</h4>
       <div class="table-responsive">
         <table class="table table-dark table-striped text-start">
           <thead>
             <tr>
               <th>Oyun Adı</th>
               <th>Tür</th>
-              <th>Puan</th>
+              <th>Puan (10 üzerinden)</th>
               <th>Oyuncu Sayısı (M)</th>
+              <th>Ağırlıklı Platform</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>It Takes Two</td><td>Kooperatif</td><td>9.1</td><td>5.2</td></tr>
-            <tr><td>Elden Ring</td><td>Aksiyon RPG</td><td>9.5</td><td>10.4</td></tr>
-            <tr><td>Helldivers II</td><td>Aksiyon FPS</td><td>8.8</td><td>3.6</td></tr>
-            <tr><td>Hades II</td><td>Roguelike</td><td>9.2</td><td>2.1</td></tr>
-            <tr><td>Split Fiction</td><td>Macera</td><td>8.3</td><td>1.5</td></tr>
+            <tr>
+              <td>It Takes Two</td>
+              <td>Kooperatif / Macera</td>
+              <td>9.1</td>
+              <td>5.2</td>
+              <td>PlayStation &amp; PC</td>
+            </tr>
+            <tr>
+              <td>Elden Ring</td>
+              <td>Aksiyon RPG</td>
+              <td>9.5</td>
+              <td>10.4</td>
+              <td>PC &amp; Konsol</td>
+            </tr>
+            <tr>
+              <td>Helldivers II</td>
+              <td>Aksiyon FPS / Co-op</td>
+              <td>8.8</td>
+              <td>3.6</td>
+              <td>PC &amp; PS5</td>
+            </tr>
+            <tr>
+              <td>Hades II</td>
+              <td>Roguelike</td>
+              <td>9.2</td>
+              <td>2.1</td>
+              <td>PC</td>
+            </tr>
+            <tr>
+              <td>Split Fiction</td>
+              <td>Macera</td>
+              <td>8.3</td>
+              <td>1.5</td>
+              <td>PC</td>
+            </tr>
           </tbody>
         </table>
       </div>
+
+      <p style="font-size:13px; color:#aaa;" class="mt-2">
+        Tablo ve grafikler, <strong>OyunTanıtım web tasarım projesi</strong> kapsamında örnek veri seti
+        kullanılarak hazırlanmıştır.
+      </p>
+
     </div>
   </section>
 
-<!-- FOOTER -->
-<footer class="footer-section">
-  <div class="container">
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="container">
+      <a href="index.html" class="footer-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
 
-    <a href="index.html" class="footer-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
+      <ul class="main-menu footer-menu">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="games.html">Oyunlar</a></li>
+        <li><a href="duyurular.html">Duyurular</a></li>
+        <li><a href="istatistikler.html">İstatistikler</a></li>
+        <li><a href="hakkinda.html">Hakkımızda</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
 
-    <ul class="main-menu footer-menu">
-      <li><a href="index.html">Ana Sayfa</a></li>
-      <li><a href="games.html">Oyunlar</a></li>
-      <li><a href="duyurular.html">Duyurular</a></li>
-      <li><a href="istatistikler.html">İstatistikler</a></li>
-      <li><a href="about.html">Hakkımızda</a></li>
-      <li><a href="contact.html">İletişim</a></li>
-    </ul>
+      <div class="footer-social d-flex justify-content-center">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
 
-    <div class="footer-social d-flex justify-content-center">
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-instagram"></i></a>
-      <a href="#"><i class="fa fa-youtube"></i></a>
+      <div class="copyright">
+        © 2025 OyunTanıtım | TBL303 Web Tasarımı Dersi Projesi
+      </div>
     </div>
+  </footer>
 
-    <div class="copyright">
-      © 2025 OyunTanıtım | TBL303 Web Tasarımı Dersi Projesi
-    </div>
+  <!-- JS -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.slicknav.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.sticky-sidebar.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/main.js"></script>
 
-  </div>
-</footer>
-
+  <!-- Chart.js Kodları -->
   <script>
-  new Chart(document.getElementById('ratingChart'), {
-    type: 'bar',
-    data: {
-      labels: ['It Takes Two', 'Elden Ring', 'Helldivers II', 'Hades II', 'Split Fiction'],
-      datasets: [{
-        label: 'Ortalama Puan',
-        data: [9.1, 9.5, 8.8, 9.2, 8.3],
-        backgroundColor: 'rgba(75, 192, 192, 0.6)'
-      }]
-    },
-    options: { plugins: { legend: { display: false }}, scales: { y: { beginAtZero: true, max: 10 } } }
-  });
+    // Ortak veriler
+    const oyunAdlari = ['It Takes Two', 'Elden Ring', 'Helldivers II', 'Hades II', 'Split Fiction'];
+    const oyunPuanlari = [9.1, 9.5, 8.8, 9.2, 8.3];
 
-  new Chart(document.getElementById('genreChart'), {
-    type: 'pie',
-    data: {
-      labels: ['Kooperatif', 'RPG', 'FPS', 'Roguelike', 'Macera'],
-      datasets: [{
-        data: [1, 1, 1, 1, 1],
-        backgroundColor: ['#ff6384','#36a2eb','#ffcd56','#4bc0c0','#9966ff']
-      }]
-    }
-  });
+    // Oyun Puanları (Bar Chart)
+    new Chart(document.getElementById('ratingChart'), {
+      type: 'bar',
+      data: {
+        labels: oyunAdlari,
+        datasets: [{
+          label: 'Puan',
+          data: oyunPuanlari,
+          backgroundColor: ['#36a2eb','#ff6384','#ffcd56','#4bc0c0','#9966ff']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 10
+          }
+        }
+      }
+    });
 
-  new Chart(document.getElementById('platformChart'), {
-    type: 'doughnut',
-    data: {
-      labels: ['PC', 'PlayStation', 'Xbox'],
-      datasets: [{
-        data: [5, 3, 2],
-        backgroundColor: ['#007bff','#ff6384','#ffcd56']
-      }]
-    }
-  });
+    // Tür Dağılımı (Pie/Doughnut)
+    new Chart(document.getElementById('genreChart'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Kooperatif', 'Aksiyon RPG', 'Aksiyon FPS', 'Roguelike', 'Macera'],
+        datasets: [{
+          data: [1, 1, 1, 1, 1],
+          backgroundColor: ['#ff6384','#36a2eb','#ffcd56','#4bc0c0','#9966ff']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'bottom' }
+        }
+      }
+    });
+
+    // Platform Tercihleri (Doughnut)
+    new Chart(document.getElementById('platformChart'), {
+      type: 'doughnut',
+      data: {
+        labels: ['PC', 'PlayStation', 'Xbox'],
+        datasets: [{
+          data: [5, 3, 2],
+          backgroundColor: ['#007bff','#ff6384','#ffcd56']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'bottom' }
+        }
+      }
+    });
   </script>
 </body>
 </html>
