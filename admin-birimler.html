@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <title>Yönetim Paneli - Birim Yönetimi | OyunTanıtım</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="OyunTanıtım birim yönetimi paneli">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="img/favicon.ico" rel="shortcut icon"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="css/slicknav.min.css"/>
+  <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+  <link rel="stylesheet" href="css/magnific-popup.css"/>
+  <link rel="stylesheet" href="css/animate.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <style>
+    .admin-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      background: #ffb320;
+      color: #111;
+      font-weight: 600;
+      margin-left: 10px;
+    }
+    .admin-card {
+      background: #0d0d23;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 30px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .admin-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .admin-card small {
+      color: #aaa;
+    }
+    .form-text {
+      color: #aaa;
+      font-size: 13px;
+    }
+    .table-dark-custom {
+      background: #161632;
+      color: #fff;
+    }
+    .table-dark-custom thead {
+      background: #1f1f3f;
+    }
+    .table-dark-custom tbody tr:nth-child(even) {
+      background: #13132b;
+    }
+    .site-btn-secondary {
+      background: #444;
+      border: none;
+      color: #fff;
+      font-size: 14px;
+      padding: 8px 15px;
+      border-radius: 30px;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 1px;
+      display: inline-block;
+    }
+    .site-btn-secondary:hover {
+      opacity: 0.9;
+      color: #fff;
+      text-decoration: none;
+    }
+    .badge-active {
+      background-color: #28a745;
+    }
+    .badge-passive {
+      background-color: #6c757d;
+    }
+    .badge-core {
+      background-color: #17a2b8;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="preloder"><div class="loader"></div></div>
+
+<!-- Header -->
+<header class="header-section">
+  <div class="header-warp">
+
+    <div class="header-social d-flex justify-content-end">
+      <p>Bizi Takip Et:</p>
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-youtube"></i></a>
+    </div>
+
+    <div class="header-bar-warp d-flex">
+      <a href="index.html" class="site-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
+
+      <nav class="top-nav-area w-100">
+        <ul class="main-menu primary-menu">
+          <li><a href="index.html">Ana Sayfa</a></li>
+
+          <li>
+            <a href="#">Oyunlar</a>
+            <ul class="sub-menu">
+              <li><a href="games.html">Tüm Oyunlar</a></li>
+              <li><a href="kategori-aksiyon.html">Aksiyon</a></li>
+              <li><a href="kategori-macera.html">Macera</a></li>
+              <li><a href="kategori-kooperatif.html">Kooperatif</a></li>
+              <li><a href="kategori-fps.html">FPS</a></li>
+              <li><a href="kategori-rpg.html">RPG</a></li>
+            </ul>
+          </li>
+
+          <li><a href="duyurular.html">Duyurular</a></li>
+          <li><a href="istatistikler.html">İstatistikler</a></li>
+          <li><a href="about.html">Hakkımızda</a></li>
+          <li><a href="contact.html">İletişim</a></li>
+
+          <!-- Admin menü grubu -->
+          <li class="active">
+            <a href="#">Yönetim</a>
+            <ul class="sub-menu">
+              <li><a href="admin-duyurular.html">Duyuru Yönetimi</a></li>
+              <li><a href="admin-oyunlar.html">Oyun Yönetimi</a></li>
+              <li><a href="admin-birimler.html">Birim Yönetimi</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</header>
+
+<!-- Başlık -->
+<section class="page-top-section set-bg" data-setbg="img/page-top-bg/3.jpg">
+  <div class="container">
+    <h2>Birim Yönetimi <span class="admin-badge">Admin</span></h2>
+    <p>OyunTanıtım ekibinde yer alan birimleri ve sorumlu kişileri yöneten arayüz.</p>
+  </div>
+</section>
+
+<!-- İçerik -->
+<section class="page-section spad">
+  <div class="container">
+
+    <!-- Mevcut Birimler -->
+    <div class="admin-card">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+          <h3>Mevcut Birimler</h3>
+          <small>Bu kayıtlar örnek amaçlıdır. Birimler sayfasında (Birimlerimiz) gösterilebilir.</small>
+        </div>
+        <a href="#yeniBirimFormu" class="site-btn-secondary">Yeni Birim Ekle</a>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-dark-custom table-sm">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Birim Adı</th>
+              <th>Birim Tipi</th>
+              <th>Sorumlu Kişi</th>
+              <th>E-posta</th>
+              <th>Üye Sayısı</th>
+              <th>Durum</th>
+              <th>İşlemler</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5</td>
+              <td>Teknik ve Altyapı Ekibi</td>
+              <td>Teknik</td>
+              <td>Teknik Editör</td>
+              <td>teknik@oyuntanitim.com</td>
+              <td>2</td>
+              <td>
+                <span class="badge badge-active">Aktif</span>
+              </td>
+              <td>
+                <button class="site-btn-secondary btn-sm">Düzenle</button>
+                <button class="site-btn-secondary btn-sm">Sil</button>
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Sosyal Medya ve Topluluk</td>
+              <td>İletişim</td>
+              <td>Topluluk Yöneticisi</td>
+              <td>topluluk@oyuntanitim.com</td>
+              <td>3</td>
+              <td>
+                <span class="badge badge-active">Aktif</span>
+              </td>
+              <td>
+                <button class="site-btn-secondary btn-sm">Düzenle</button>
+                <button class="site-btn-secondary btn-sm">Sil</button>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>İstatistik ve Veri Ekibi</td>
+              <td>Analiz</td>
+              <td>Veri Editörü</td>
+              <td>istatistik@oyuntanitim.com</td>
+              <td>2</td>
+              <td>
+                <span class="badge badge-active">Aktif</span>
+                <span class="badge badge-core">Çekirdek</span>
+              </td>
+              <td>
+                <button class="site-btn-secondary btn-sm">Düzenle</button>
+                <button class="site-btn-secondary btn-sm">Sil</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>İnceleme ve İçerik Ekibi</td>
+              <td>İçerik</td>
+              <td>Baş Editör</td>
+              <td>icerik@oyuntanitim.com</td>
+              <td>4</td>
+              <td>
+                <span class="badge badge-active">Aktif</span>
+                <span class="badge badge-core">Çekirdek</span>
+              </td>
+              <td>
+                <button class="site-btn-secondary btn-sm">Düzenle</button>
+                <button class="site-btn-secondary btn-sm">Sil</button>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Yayın Planlama ve Editör Kurulu</td>
+              <td>Yönetim</td>
+              <td>Genel Yayın Yönetmeni</td>
+              <td>yonetim@oyuntanitim.com</td>
+              <td>3</td>
+              <td>
+                <span class="badge badge-active">Aktif</span>
+                <span class="badge badge-core">Çekirdek</span>
+              </td>
+              <td>
+                <button class="site-btn-secondary btn-sm">Düzenle</button>
+                <button class="site-btn-secondary btn-sm">Sil</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Yeni Birim Ekle -->
+    <div class="admin-card" id="yeniBirimFormu">
+      <h3>Yeni Birim Ekle</h3>
+      <small>Bu form, “Birimlerimiz” yapısını göstermek için hazırlanmıştır.</small>
+      <hr>
+
+      <form id="adminBirimForm">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="birimAdi">Birim Adı</label>
+            <input type="text" class="form-control" id="birimAdi"
+                   placeholder="Örn: İnceleme ve İçerik Ekibi">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="birimTipi">Birim Tipi</label>
+            <select id="birimTipi" class="form-control">
+              <option selected>Seçiniz...</option>
+              <option>Yönetim</option>
+              <option>İçerik</option>
+              <option>Analiz</option>
+              <option>İletişim</option>
+              <option>Teknik</option>
+              <option>Destek</option>
+              <option>Diğer</option>
+            </select>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="birimDurum">Durum</label>
+            <select id="birimDurum" class="form-control">
+              <option>Aktif</option>
+              <option>Pasif</option>
+              <option>Planlanıyor</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="sorumluKisi">Sorumlu Kişi</label>
+            <input type="text" class="form-control" id="sorumluKisi"
+                   placeholder="Örn: Genel Yayın Yönetmeni">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="birimEposta">Birim E-posta Adresi</label>
+            <input type="email" class="form-control" id="birimEposta"
+                   placeholder="Örn: birim@oyuntanitim.com">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="birimTelefon">Dahili Telefon (opsiyonel)</label>
+            <input type="text" class="form-control" id="birimTelefon"
+                   placeholder="Örn: +90 262 000 00 00 / 123">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="uyeSayisi">Ekip Üye Sayısı (tahmini)</label>
+            <input type="number" min="1" class="form-control" id="uyeSayisi"
+                   placeholder="Örn: 3">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="birimOncelik">Öncelik / Sıralama</label>
+            <input type="number" min="1" class="form-control" id="birimOncelik"
+                   placeholder="Örn: 1 = En üstte">
+            <small class="form-text">
+              Birimler sayfasında gösterim sırasını belirlemek için kullanılabilir.
+            </small>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="birimGorsel">Birim Görseli (URL)</label>
+            <input type="text" class="form-control" id="birimGorsel"
+                   placeholder="Örn: img/birimler/icerik-ekibi.jpg">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="kisaTanim">Kısa Tanım</label>
+          <textarea id="kisaTanim" class="form-control" rows="2"
+            placeholder="Birimlerimiz sayfasında kutucuk üzerinde gösterilecek kısa açıklama..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="detayTanim">Detaylı Açıklama / Görevler</label>
+          <textarea id="detayTanim" class="form-control" rows="4"
+            placeholder="Birim görevleri, sorumlulukları, yürüttüğü çalışmalar..."></textarea>
+          <small class="form-text">
+            Bu metin, istenirse ayrı bir “Birim detay” sayfasında veya Hakkımızda sayfasında kullanılabilir.
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label>Gösterim Seçenekleri</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="birimlerSayfasindaGoster" checked>
+            <label class="form-check-label" for="birimlerSayfasindaGoster">
+              “Birimlerimiz” sayfasında göster
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="hakkimizdadaGoster">
+            <label class="form-check-label" for="hakkimizdadaGoster">
+              Hakkımızda sayfasında özet olarak göster
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="site-btn">Birimi Kaydet</button>
+        <button type="reset" class="site-btn site-btn-secondary" style="margin-left:10px;">Formu Temizle</button>
+
+        <p class="form-text mt-3">
+          Not: Bu panel yalnızca arayüz tasarımı içindir.
+        </p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-section">
+  <div class="container">
+
+    <a href="index.html" class="footer-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
+
+    <ul class="main-menu footer-menu">
+      <li><a href="index.html">Ana Sayfa</a></li>
+      <li><a href="games.html">Oyunlar</a></li>
+      <li><a href="duyurular.html">Duyurular</a></li>
+      <li><a href="istatistikler.html">İstatistikler</a></li>
+      <li><a href="about.html">Hakkımızda</a></li>
+      <li><a href="contact.html">İletişim</a></li>
+    </ul>
+
+    <div class="footer-social d-flex justify-content-center">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-youtube"></i></a>
+    </div>
+
+    <div class="copyright">
+      © 2025 OyunTanıtım | TBL303 Web Tasarımı Dersi Projesi
+    </div>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.slicknav.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.sticky-sidebar.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+  // Admin birim formu: demo uyarısı
+  document.getElementById("adminBirimForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Bu yönetim paneli eğitim amaçlıdır.\n\nForm verileri sunucuya kaydedilmemektedir.");
+  });
+</script>
+
+</body>
+</html>
