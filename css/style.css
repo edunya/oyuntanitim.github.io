@@ -328,8 +328,9 @@ ol {
 	box-shadow: 0 0 9px 3px rgba(226, 30, 228, 0.24);
 }
 
-.site-logo {
-	float: left;
+.site-logo img {
+  width: 199px;
+  height: auto;
 }
 
 .user-panel {
