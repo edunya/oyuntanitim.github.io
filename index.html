@@ -297,11 +297,15 @@
                   background-position: center;
                   min-height: 800px;'>
     <div class="container text-center">
-      <iframe width="600" height="430"
-              src="https://www.youtube.com/embed/qLZenOn7WUo"
-              title="Elden Ring - Shadow of the Erdtree"
-              frameborder="0"
-              allowfullscreen></iframe>
+
+      <!-- POPUP AÇAN BUTON -->
+      <button type="button"
+              class="site-btn"
+              data-toggle="modal"
+              data-target="#eldenRingVideoModal">
+        Videoyu İzle
+      </button>
+
       <div class="video-text mt-3">
         <h2>Haftanın Oyunu: Shadow of the Erdtree</h2>
         <p>Yeni DLC ile keşfedilmeyi bekleyen koca bir dünya.</p>
@@ -309,34 +313,63 @@
     </div>
   </section>
 
-<!-- FOOTER -->
-<footer class="footer-section">
-  <div class="container">
-
-    <a href="index.html" class="footer-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
-
-    <ul class="main-menu footer-menu">
-      <li><a href="index.html">Ana Sayfa</a></li>
-      <li><a href="games.html">Oyunlar</a></li>
-      <li><a href="duyurular.html">Duyurular</a></li>
-      <li><a href="istatistikler.html">İstatistikler</a></li>
-      <li><a href="about.html">Hakkımızda</a></li>
-      <li><a href="contact.html">İletişim</a></li>
-    </ul>
-
-    <div class="footer-social d-flex justify-content-center">
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-instagram"></i></a>
-      <a href="#"><i class="fa fa-youtube"></i></a>
+  <!-- Elden Ring Video Modal -->
+  <div class="modal fade" id="eldenRingVideoModal" tabindex="-1" role="dialog" aria-labelledby="eldenRingVideoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white" id="eldenRingVideoLabel">
+            Elden Ring - Shadow of the Erdtree
+          </h5>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Kapat">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+  
+        <div class="modal-body p-0">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe id="eldenRingVideoFrame"
+                    class="embed-responsive-item"
+                    src=""
+                    title="Elden Ring - Shadow of the Erdtree"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="copyright">
-      © 2025 OyunTanıtım | TBL303 Web Tasarımı Dersi Projesi
-    </div>
-
   </div>
-</footer>
+
+
+  <!-- FOOTER -->
+  <footer class="footer-section">
+    <div class="container">
+  
+      <a href="index.html" class="footer-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
+  
+      <ul class="main-menu footer-menu">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="games.html">Oyunlar</a></li>
+        <li><a href="duyurular.html">Duyurular</a></li>
+        <li><a href="istatistikler.html">İstatistikler</a></li>
+        <li><a href="about.html">Hakkımızda</a></li>
+        <li><a href="contact.html">İletişim</a></li>
+      </ul>
+  
+      <div class="footer-social d-flex justify-content-center">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
+  
+      <div class="copyright">
+        © 2025 OyunTanıtım | TBL303 Web Tasarımı Dersi Projesi
+      </div>
+  
+    </div>
+  </footer>
 
       <!-- Duyuru 1 Modal: BAFTA 2025 -->
     <div class="modal fade" id="duyuru1Modal" tabindex="-1" role="dialog" aria-labelledby="duyuru1Label" aria-hidden="true">
