@@ -6,15 +6,30 @@
   <meta name="description" content="Helldivers II oyun detayları, sistem gereksinimleri ve fragman.">
   <meta name="keywords" content="oyun, tanıtım, inceleme, fragman, sistem gereksinimleri">
   <title>Helldivers II</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
   <link rel="stylesheet" href="css/style.css"/>
+
   <style>
+    /* Sayfaya özel minik stiller (istersen style.css'e taşıyabilirsin) */
     .info-badges span{display:inline-block;margin:4px 6px;padding:6px 10px;border:1px solid rgba(255,255,255,.2);border-radius:999px;font-size:12px;color:#ddd}
     .btn-row{gap:10px}
     .shadow-hero{box-shadow:0 10px 30px rgba(0,0,0,.35)}
+
+    /* Platform buton renkleri + disabled hali */
+    .site-btn.steam-btn{background:#171a21}
+    .site-btn.xbox-btn{background:#107c10}
+    .site-btn.ps-btn{background:#003791}
+    .site-btn.epic-btn{background:#202020}
+    .site-btn[aria-disabled="true"]{opacity:.55;pointer-events:none;cursor:not-allowed}
+
+    /* Küçük uyarı rozeti */
+    .badge-unavail{display:inline-block;font-size:.75rem;padding:.2rem .5rem;background:#6c757d;border-radius:.35rem;margin-left:.5rem}
   </style>
 </head>
 <body>
+  <!-- HEADER -->
   <header class="header-section">
     <div class="header-bar-warp d-flex">
       <a href="index.html" class="site-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
@@ -31,6 +46,7 @@
     </div>
   </header>
 
+  <!-- SAYFA ÜSTÜ -->
   <section class="page-top-section set-bg" data-setbg="img/page-top-bg/1.jpg">
     <div class="page-info">
       <h2>Helldivers II</h2>
@@ -40,69 +56,144 @@
     </div>
   </section>
 
+  <!-- İÇERİK -->
   <section class="games-single-page">
     <div class="container">
+
+      <!-- ← Oyun Listesine Dön + Platform Butonları -->
       <div class="d-flex flex-wrap align-items-center justify-content-between mb-3 btn-row">
         <a href="games.html" class="site-btn">← Oyun Listesine Dön</a>
-        <a href="https://store.steampowered.com/app/553850/HELLDIVERS_2/" target="_blank" class="site-btn">Steam'de Gör</a>
+        <div class="d-flex flex-wrap btn-row">
+          <a href="https://store.steampowered.com/app/553850/HELLDIVERS_2/" target="_blank" class="site-btn steam-btn">Steam</a>
+          <a href="https://www.xbox.com/tr-TR/games/store/helldivers-2/9P3PT7PQJD0M" target="_blank" class="site-btn xbox-btn">Xbox</a>
+          <a href="https://www.playstation.com/en-tr/games/helldivers-2/" target="_blank" class="site-btn ps-btn">PlayStation</a>
+          <a href="#" class="site-btn epic-btn" aria-disabled="true" data-toggle="tooltip" title="Bu oyun Epic Games’te satışta değil">Epic Games</a>
+        </div>
       </div>
 
+      <!-- Fiyat Geçmişi & Platformlar (Sekmeli) -->
+      <div class="game-price-box mt-3">
+        <h5>Fiyat Geçmişi & Platformlar</h5>
+
+        <ul class="nav nav-pills mb-3" id="hd2PriceTab" role="tablist">
+          <li class="nav-item"><a class="nav-link active" id="hd2-steam-tab" data-toggle="pill" href="#hd2-steam" role="tab">Steam</a></li>
+          <li class="nav-item"><a class="nav-link" id="hd2-xbox-tab" data-toggle="pill" href="#hd2-xbox" role="tab">Xbox</a></li>
+          <li class="nav-item"><a class="nav-link" id="hd2-ps-tab" data-toggle="pill" href="#hd2-ps" role="tab">PlayStation</a></li>
+          <li class="nav-item"><a class="nav-link" id="hd2-epic-tab" data-toggle="pill" href="#hd2-epic" role="tab">Epic Games</a></li>
+        </ul>
+
+        <div class="tab-content" id="hd2PriceTabContent">
+          <!-- Steam -->
+          <div class="tab-pane fade show active" id="hd2-steam" role="tabpanel" aria-labelledby="hd2-steam-tab">
+            <table class="table table-sm table-borderless mb-2 text-light">
+              <tbody>
+                <tr><th scope="row">Bölge</th><td>Türkiye (TL)</td></tr>
+                <tr><th scope="row">Çıkış Fiyatı</th><td>—</td></tr>
+                <tr><th scope="row">Şu Anki Fiyat</th><td>—</td></tr>
+                <tr><th scope="row">En Düşük Fiyat</th><td>—  <small>(<a href="https://steamdb.info/app/553850/" target="_blank">SteamDB</a>)</small></td></tr>
+              </tbody>
+            </table>
+            <a href="https://store.steampowered.com/app/553850/HELLDIVERS_2/" target="_blank" class="site-btn steam-btn btn-sm">Steam Mağazasına Git</a>
+          </div>
+
+          <!-- Xbox -->
+          <div class="tab-pane fade" id="hd2-xbox" role="tabpanel" aria-labelledby="hd2-xbox-tab">
+            <table class="table table-sm table-borderless mb-2 text-light">
+              <tbody>
+                <tr><th scope="row">Platform</th><td>Xbox Store</td></tr>
+                <tr><th scope="row">Şu Anki Fiyat</th><td>—</td></tr>
+                <tr><th scope="row">En Düşük Fiyat</th><td>—</td></tr>
+              </tbody>
+            </table>
+            <a href="https://www.xbox.com/tr-TR/games/store/helldivers-2/9P3PT7PQJD0M" target="_blank" class="site-btn xbox-btn btn-sm">Xbox Mağazasına Git</a>
+          </div>
+
+          <!-- PlayStation -->
+          <div class="tab-pane fade" id="hd2-ps" role="tabpanel" aria-labelledby="hd2-ps-tab">
+            <table class="table table-sm table-borderless mb-2 text-light">
+              <tbody>
+                <tr><th scope="row">Platform</th><td>PlayStation Store</td></tr>
+                <tr><th scope="row">Şu Anki Fiyat</th><td>—</td></tr>
+                <tr><th scope="row">En Düşük Fiyat</th><td>—</td></tr>
+              </tbody>
+            </table>
+            <a href="https://www.playstation.com/en-tr/games/helldivers-2/" target="_blank" class="site-btn ps-btn btn-sm">PlayStation Mağazasına Git</a>
+          </div>
+
+          <!-- Epic (Satışta Değil) -->
+          <div class="tab-pane fade" id="hd2-epic" role="tabpanel" aria-labelledby="hd2-epic-tab">
+            <div class="alert alert-secondary mb-2">
+              Bu oyun Epic Games Store’da satışta değil <span class="badge-unavail">Satışta değil</span>
+            </div>
+          </div>
+        </div>
+
+        <small>Not: Rakamları SteamDB ve ilgili mağaza sayfalarından doldurabilirsin.</small>
+      </div>
+
+      <!-- Kapak görseli -->
       <img src="img/games/helldivers2.jpg" class="img-fluid rounded mb-4 shadow-hero" alt="Helldivers II">
 
+      <!-- Bilgi rozetleri -->
       <div class="info-badges mb-3">
-        <span>Tür: Kooperatif Aksiyon FPS</span><span>Geliştirici: Arrowhead</span><span>Platform: PC/PS5</span>
+        <span>Tür: Kooperatif Aksiyon FPS</span>
+        <span>Geliştirici: Arrowhead</span>
+        <span>Platform: PC/PS5</span>
       </div>
 
+      <!-- Oynanış Özeti -->
       <h4>Oynanış Özeti</h4>
       <p>Galaksiyi özgürlük adına savunan seçkin birliklerin yoğun aksiyonlu operasyonları. Taktiksel ilerleme, dost ateşi ve ekip koordinasyonu ön plandadır.</p>
 
-      <div class="game-price-box">
-        <h5>Fiyat Bilgisi</h5>
-        <p>Helldivers II, PC ve PS5 için genellikle <strong>999 TL – 1.499 TL</strong> bandında listelenmektedir.</p>
-        <small>Not: Güncel fiyat ve indirimler için dijital mağaza sayfalarını kontrol edin.</small>
-      </div>
-      
+      <!-- Sistem Gereksinimleri -->
       <h4>Sistem Gereksinimleri</h4>
       <ul>
-        <li>İşletim Sistemi: Windows 10 64-bit</li><li>İşlemci: Intel i7 veya eşdeğeri</li><li>Bellek: 12 GB RAM</li><li>Ekran Kartı: NVIDIA GTX 1060 / eşdeğeri</li><li>Depolama: 60 GB</li>
+        <li>İşletim Sistemi: Windows 10 64-bit</li>
+        <li>İşlemci: Intel i7 veya eşdeğeri</li>
+        <li>Bellek: 12 GB RAM</li>
+        <li>Ekran Kartı: NVIDIA GTX 1060 / eşdeğeri</li>
+        <li>Depolama: 60 GB</li>
       </ul>
 
+      <!-- Fragman -->
       <h4>Fragman</h4>
       <div class="embed-responsive embed-responsive-16by9 mb-4">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3GzvuUjPoK8" allowfullscreen title="Helldivers II fragman"></iframe>
       </div>
+
     </div>
   </section>
 
-<!-- FOOTER -->
-<footer class="footer-section">
-  <div class="container">
+  <!-- FOOTER -->
+  <footer class="footer-section">
+    <div class="container">
 
-    <a href="index.html" class="footer-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
+      <a href="index.html" class="footer-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
 
-    <ul class="main-menu footer-menu">
-      <li><a href="index.html">Ana Sayfa</a></li>
-      <li><a href="games.html">Oyunlar</a></li>
-      <li><a href="duyurular.html">Duyurular</a></li>
-      <li><a href="istatistikler.html">İstatistikler</a></li>
-      <li><a href="about.html">Hakkımızda</a></li>
-      <li><a href="contact.html">İletişim</a></li>
-    </ul>
+      <ul class="main-menu footer-menu">
+        <li><a href="index.html">Ana Saya</a></li>
+        <li><a href="games.html">Oyunlar</a></li>
+        <li><a href="duyurular.html">Duyurular</a></li>
+        <li><a href="istatistikler.html">İstatistikler</a></li>
+        <li><a href="about.html">Hakkımızda</a></li>
+        <li><a href="contact.html">İletişim</a></li>
+      </ul>
 
-    <div class="footer-social d-flex justify-content-center">
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-instagram"></i></a>
-      <a href="#"><i class="fa fa-youtube"></i></a>
+      <div class="footer-social d-flex justify-content-center">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
+
+      <div class="copyright">
+        © 2025 OyunTanıtım | TBL303 Web Tasarımı Dersi Projesi
+      </div>
+
     </div>
+  </footer>
 
-    <div class="copyright">
-      © 2025 OyunTanıtım | TBL303 Web Tasarımı Dersi Projesi
-    </div>
-
-  </div>
-</footer>
-
+  <!-- JS -->
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.slicknav.min.js"></script>
@@ -110,5 +201,3 @@
   <script src="js/jquery.sticky-sidebar.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/main.js"></script>
-</body>
-</html>
