@@ -12,6 +12,14 @@
     .info-badges span{display:inline-block;margin:4px 6px;padding:6px 10px;border:1px solid rgba(255,255,255,.2);border-radius:999px;font-size:12px;color:#ddd}
     .btn-row{gap:10px}
     .shadow-hero{box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    /* Platform buton renkleri + disabled hali */
+    .site-btn.steam-btn{background:#171a21}
+    .site-btn.xbox-btn{background:#107c10}
+    .site-btn.ps-btn{background:#003791}
+    .site-btn.epic-btn{background:#202020}
+    .site-btn[aria-disabled="true"]{opacity:.55;pointer-events:none;cursor:not-allowed}
+    /* Küçük uyarı rozeti */
+    .badge-unavail{display:inline-block;font-size:.75rem;padding:.2rem .5rem;background:#6c757d;border-radius:.35rem;margin-left:.5rem}
   </style>
 </head>
 <body>
@@ -42,9 +50,73 @@
 
   <section class="games-single-page">
     <div class="container">
+
+      <!-- ← Oyun Listesine Dön + Platform Butonları -->
       <div class="d-flex flex-wrap align-items-center justify-content-between mb-3 btn-row">
         <a href="games.html" class="site-btn">← Oyun Listesine Dön</a>
-        <a href="https://store.steampowered.com/app/1145350/Hades_II/" target="_blank" class="site-btn">Steam'de Gör</a>
+        <div class="d-flex flex-wrap btn-row">
+          <a href="https://store.steampowered.com/app/1145350/Hades_II/" target="_blank" class="site-btn steam-btn">Steam</a>
+          <a href="#" class="site-btn xbox-btn" aria-disabled="true" data-toggle="tooltip" title="Bu oyun Xbox’ta satışta değil">Xbox</a>
+          <a href="#" class="site-btn ps-btn" aria-disabled="true" data-toggle="tooltip" title="Bu oyun PlayStation’da satışta değil">PlayStation</a>
+          <a href="https://store.epicgames.com/tr/p/hades-ii" target="_blank" class="site-btn epic-btn">Epic Games</a>
+        </div>
+      </div>
+
+      <!-- Fiyat Geçmişi & Platformlar (Sekmeli) -->
+      <div class="game-price-box mt-3">
+        <h5>Fiyat Geçmişi & Platformlar</h5>
+
+        <ul class="nav nav-pills mb-3" id="h2PriceTab" role="tablist">
+          <li class="nav-item"><a class="nav-link active" id="h2-steam-tab" data-toggle="pill" href="#h2-steam" role="tab">Steam</a></li>
+          <li class="nav-item"><a class="nav-link" id="h2-xbox-tab" data-toggle="pill" href="#h2-xbox" role="tab">Xbox</a></li>
+          <li class="nav-item"><a class="nav-link" id="h2-ps-tab" data-toggle="pill" href="#h2-ps" role="tab">PlayStation</a></li>
+          <li class="nav-item"><a class="nav-link" id="h2-epic-tab" data-toggle="pill" href="#h2-epic" role="tab">Epic Games</a></li>
+        </ul>
+
+        <div class="tab-content" id="h2PriceTabContent">
+          <!-- Steam -->
+          <div class="tab-pane fade show active" id="h2-steam" role="tabpanel" aria-labelledby="h2-steam-tab">
+            <table class="table table-sm table-borderless mb-2 text-light">
+              <tbody>
+                <tr><th scope="row">Bölge</th><td>Türkiye (TL)</td></tr>
+                <tr><th scope="row">Çıkış Fiyatı</th><td>—</td></tr>
+                <tr><th scope="row">Şu Anki Fiyat</th><td>—</td></tr>
+                <tr><th scope="row">En Düşük Fiyat</th>
+                  <td>— <small>(<a href="https://steamdb.info/app/1145350/" target="_blank">SteamDB</a>)</small></td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="https://store.steampowered.com/app/1145350/Hades_II/" target="_blank" class="site-btn steam-btn btn-sm">Steam Mağazasına Git</a>
+          </div>
+
+          <!-- Xbox (Satışta değil) -->
+          <div class="tab-pane fade" id="h2-xbox" role="tabpanel" aria-labelledby="h2-xbox-tab">
+            <div class="alert alert-secondary mb-2">
+              Bu oyun Xbox Store’da satışta değil <span class="badge-unavail">Satışta değil</span>
+            </div>
+          </div>
+
+          <!-- PlayStation (Satışta değil) -->
+          <div class="tab-pane fade" id="h2-ps" role="tabpanel" aria-labelledby="h2-ps-tab">
+            <div class="alert alert-secondary mb-2">
+              Bu oyun PlayStation Store’da satışta değil <span class="badge-unavail">Satışta değil</span>
+            </div>
+          </div>
+
+          <!-- Epic -->
+          <div class="tab-pane fade" id="h2-epic" role="tabpanel" aria-labelledby="h2-epic-tab">
+            <table class="table table-sm table-borderless mb-2 text-light">
+              <tbody>
+                <tr><th scope="row">Platform</th><td>Epic Games Store</td></tr>
+                <tr><th scope="row">Şu Anki Fiyat</th><td>—</td></tr>
+                <tr><th scope="row">En Düşük Fiyat</th><td>—</td></tr>
+              </tbody>
+            </table>
+            <a href="https://store.epicgames.com/tr/p/hades-ii" target="_blank" class="site-btn epic-btn btn-sm">Epic Mağazasına Git</a>
+          </div>
+        </div>
+
+        <small>Not: Rakamları SteamDB ve ilgili mağaza sayfalarından doldurabilirsin.</small>
       </div>
 
       <img src="img/games/hades2.jpg" class="img-fluid rounded mb-4 shadow-hero" alt="Hades II">
@@ -56,12 +128,6 @@
       <h4>Oynanış Özeti</h4>
       <p>Mitolojik dünyada geçen, tempolu savaşlar ve karakter gelişimiyle öne çıkan roguelike devam oyunu. Sanat tasarımı ve müzikleriyle dikkat çeker.</p>
 
-      <div class="game-price-box">
-        <h5>Fiyat Bilgisi</h5>
-        <p>Hades II, tam sürüm çıkışıyla birlikte genellikle <strong>599 TL – 999 TL</strong> bandında konumlandırılan bir bağımsız yapım.</p>
-        <small>Not: Güncel fiyat ve indirimler için dijital mağaza sayfalarını kontrol edin.</small>
-      </div>
-      
       <h4>Sistem Gereksinimleri</h4>
       <ul>
         <li>İşletim Sistemi: Windows 10 64-bit</li><li>İşlemci: 2.4 GHz Dual Core</li><li>Bellek: 8 GB RAM</li><li>Ekran Kartı: GeForce GTX 950 / eşdeğeri</li><li>Depolama: 20 GB</li>
@@ -110,5 +176,4 @@
   <script src="js/jquery.sticky-sidebar.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/main.js"></script>
-</body>
-</html>
+
