@@ -641,6 +641,26 @@ ol {
 	/* IE6-9 fallback on horizontal gradient */
 }
 
+/* Ana sayfadaki "Son Duyurular" alanı */
+.home-announcement-section {
+  /* blog-section ile aynı lacivert / mor degrade arka plan */
+  background: #501755;
+  background: -webkit-linear-gradient(45deg, #501755 0%, #2d1854 100%);
+  background: -o-linear-gradient(45deg, #501755 0%, #2d1854 100%);
+  background: linear-gradient(45deg, #501755 0%, #2d1854 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#501755', endColorstr='#2d1854', GradientType=1);
+}
+
+/* Bu bölümdeki yazılar okunsun diye */
+.home-announcement-section .section-title h2,
+.home-announcement-section .section-title p,
+.home-announcement-section .blog-text h4,
+.home-announcement-section .blog-text p,
+.home-announcement-section .blog-text .blog-date {
+  color: #fff;
+}
+
+
 .blog-section .section-title {
 	margin-bottom: 25px;
 }
