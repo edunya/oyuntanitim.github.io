@@ -1922,3 +1922,24 @@ ol {
   border: 2px solid rgba(255, 179, 32, 0.6);
 }
 
+/* Platform buton renkleri ve disabled hali */
+.site-btn.steam-btn { background:#171a21; }
+.site-btn.xbox-btn  { background:#107c10; }
+.site-btn.ps-btn    { background:#003791; }
+.site-btn.epic-btn  { background:#202020; }
+
+.site-btn[aria-disabled="true"] {
+  opacity:.55;
+  pointer-events:none;
+  cursor:not-allowed;
+}
+
+/* Küçük uyarı rozeti */
+.badge-unavail {
+  display:inline-block;
+  font-size:.75rem;
+  padding:.2rem .5rem;
+  background:#6c757d;
+  border-radius:.35rem;
+  margin-left:.5rem;
+}
