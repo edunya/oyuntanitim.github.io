@@ -1943,3 +1943,50 @@ ol {
   border-radius:.35rem;
   margin-left:.5rem;
 }
+
+/* ===========================
+   Mor / lacivert arkaplanlı sayfalarda okunabilir metin
+   =========================== */
+
+.games-section,
+.games-single-page,
+.review-section,
+.blog-section,
+.blog-page,
+.contact-page,
+.istatistikler-section {
+  color: #f5f5ff;
+}
+
+.games-section p,
+.games-single-page p,
+.review-section p,
+.blog-section p,
+.blog-page p,
+.contact-page p,
+.istatistikler-section p,
+.games-section li,
+.review-section li,
+.blog-section li,
+.blog-page li {
+  color: #e0defa;
+}
+
+/* Bu sayfalarda text-secondary'yi de açık renge çekiyoruz */
+.games-section .text-secondary,
+.games-single-page .text-secondary,
+.review-section .text-secondary,
+.blog-section .text-secondary,
+.blog-page .text-secondary,
+.contact-page .text-secondary,
+.istatistikler-section .text-secondary {
+  color: #e0defa !important;
+}
+
+/* Oyun listesi açıklamaları için özel sınıf */
+.game-item .game-summary {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 10px;
+  color: #e6e4ff;
+}
