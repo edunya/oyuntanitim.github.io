@@ -5,9 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Elden Ring: Shadow of the Erdtree detaylı inceleme, sistem gereksinimleri ve fragman.">
   <meta name="keywords" content="oyun, tanıtım, inceleme, fragman, sistem gereksinimleri, Elden Ring, Shadow of the Erdtree">
-  <title>Elden Ring: Shadow of the Erdtree</title>
+  <title>Elden Ring: Shadow of the Erdtree | OyunTanıtım</title>
 
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="shortcut icon"/>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="css/slicknav.min.css"/>
+  <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+  <link rel="stylesheet" href="css/magnific-popup.css"/>
+  <link rel="stylesheet" href="css/animate.css"/>
   <link rel="stylesheet" href="css/style.css"/>
 
   <style>
@@ -29,7 +41,11 @@
     .site-btn.xbox-btn{background:#107c10}
     .site-btn.ps-btn{background:#003791}
     .site-btn.epic-btn{background:#202020}
-    .site-btn[aria-disabled="true"]{opacity:.55;pointer-events:none;cursor:not-allowed}
+    .site-btn[aria-disabled="true"]{
+      opacity:.55;
+      pointer-events:none;
+      cursor:not-allowed;
+    }
 
     /* Küçük uyarı rozeti */
     .badge-unavail{
@@ -57,18 +73,46 @@
       padding-left:18px;
       margin-bottom:0;
     }
+
+    /* Bu sayfadaki başlıkları koyu fonda daha okunur yap */
+    .games-single-page h2,
+    .games-single-page h3,
+    .games-single-page h4,
+    .games-single-page h5,
+    .games-single-page h6{
+      color:#ffffff;
+    }
   </style>
 </head>
 <body>
+
+  <!-- (İstersen diğer sayfalardaki gibi preloader da ekleyebilirsin) -->
+  <!-- <div id="preloder"><div class="loader"></div></div> -->
+
   <!-- HEADER -->
   <header class="header-section">
     <div class="header-bar-warp d-flex" style="padding:10px;">
-      <a href="index.html" class="site-logo"><img src="img/logo.png" alt="OyunTanıtım" style="padding:10px;"></a>
+      <a href="index.html" class="site-logo">
+        <img src="img/logo.png" alt="OyunTanıtım" style="padding:10px;">
+      </a>
       <nav class="top-nav-area w-100">
         <ul class="main-menu primary-menu">
-          <li><a href="games.html">Tüm Oyunlar</a></li>
-          <li><a href="oyunlar-coop.html">Co-op Oyun Önerileri</a></li>
-          <li><a href="oyunlar-editor.html">Editörün Seçimi</a></li>
+          <li><a href="index.html">Ana Sayfa</a></li>
+          
+          <!-- Oyunlar Dropdown (Sadece kategoriler) -->
+          <li>
+            <a href="#">Oyunlar</a>
+            <ul class="sub-menu">
+              <li><a href="games.html">Tüm Oyunlar</a></li>
+              <li><a href="oyunlar-coop.html">Co-op Oyun Önerileri</a></li>
+              <li><a href="oyunlar-editor.html">Editörün Seçimi</a></li>
+            </ul>
+          </li>
+          
+          <li><a href="duyurular.html">Duyurular</a></li>
+          <li><a href="istatistikler.html">İstatistikler</a></li>
+          <li><a href="hakkinda.html">Hakkımızda</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
         </ul>
       </nav>
     </div>
@@ -169,8 +213,6 @@
             </div>
           </div>
         </div>
-
-        <small>Not: İstersen rakamları SteamDB ve mağaza sayfalarından kendin doldurabilirsin.</small>
       </div>
 
       <!-- Kapak görseli -->
@@ -312,7 +354,7 @@
     </div>
   </section>
 
-  <!-- FOOTER (kategorisiz sade sürüm) -->
+  <!-- FOOTER (kategorisiz, ama dolu sürüm) -->
   <footer class="footer-section">
     <div class="container">
 
