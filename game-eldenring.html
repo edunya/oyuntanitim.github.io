@@ -3,16 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Elden Ring: Shadow of the Erdtree detayları, sistem gereksinimleri ve fragman.">
-  <meta name="keywords" content="oyun, tanıtım, inceleme, fragman, sistem gereksinimleri">
+  <meta name="description" content="Elden Ring: Shadow of the Erdtree detaylı inceleme, sistem gereksinimleri ve fragman.">
+  <meta name="keywords" content="oyun, tanıtım, inceleme, fragman, sistem gereksinimleri, Elden Ring, Shadow of the Erdtree">
   <title>Elden Ring: Shadow of the Erdtree</title>
 
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
   <link rel="stylesheet" href="css/style.css"/>
 
   <style>
-    /* Sayfaya özel ufak stiller (istersen style.css'e taşıyabilirsin) */
-    .info-badges span{display:inline-block;margin:4px 6px;padding:6px 10px;border:1px solid rgba(255,255,255,.2);border-radius:999px;font-size:12px;color:#ddd}
+    /* Sayfaya özel ufak stiller */
+    .info-badges span{
+      display:inline-block;
+      margin:4px 6px;
+      padding:6px 10px;
+      border:1px solid rgba(255,255,255,.2);
+      border-radius:999px;
+      font-size:12px;
+      color:#ddd;
+    }
     .btn-row{gap:10px}
     .shadow-hero{box-shadow:0 10px 30px rgba(0,0,0,.35)}
 
@@ -24,22 +32,43 @@
     .site-btn[aria-disabled="true"]{opacity:.55;pointer-events:none;cursor:not-allowed}
 
     /* Küçük uyarı rozeti */
-    .badge-unavail{display:inline-block;font-size:.75rem;padding:.2rem .5rem;background:#6c757d;border-radius:.35rem;margin-left:.5rem}
+    .badge-unavail{
+      display:inline-block;
+      font-size:.75rem;
+      padding:.2rem .5rem;
+      background:#6c757d;
+      border-radius:.35rem;
+      margin-left:.5rem;
+    }
+
+    /* Sistem gereksinimleri kutuları */
+    .requirements-box{
+      background:rgba(0,0,0,.25);
+      border-radius:12px;
+      padding:15px 18px;
+      margin-bottom:20px;
+    }
+    .requirements-box h5{
+      margin-bottom:8px;
+      font-size:1rem;
+      font-weight:600;
+    }
+    .requirements-box ul{
+      padding-left:18px;
+      margin-bottom:0;
+    }
   </style>
 </head>
 <body>
   <!-- HEADER -->
   <header class="header-section">
-    <div class="header-bar-warp d-flex">
-      <a href="index.html" class="site-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
+    <div class="header-bar-warp d-flex" style="padding:10px;">
+      <a href="index.html" class="site-logo"><img src="img/logo.png" alt="OyunTanıtım" style="padding:10px;"></a>
       <nav class="top-nav-area w-100">
         <ul class="main-menu primary-menu">
-          <li><a href="index.html">Ana Sayfa</a></li>
-          <li><a href="games.html">Oyunlar</a></li>
-          <li><a href="duyurular.html">Duyurular</a></li>
-          <li><a href="istatistikler.html">İstatistikler</a></li>
-          <li><a href="about.html">Hakkımızda</a></li>
-          <li><a href="contact.html">İletişim</a></li>
+          <li><a href="games.html">Tüm Oyunlar</a></li>
+          <li><a href="oyunlar-coop.html">Co-op Oyun Önerileri</a></li>
+          <li><a href="oyunlar-editor.html">Editörün Seçimi</a></li>
         </ul>
       </nav>
     </div>
@@ -50,7 +79,9 @@
     <div class="page-info">
       <h2>Elden Ring: Shadow of the Erdtree</h2>
       <div class="site-breadcrumb">
-        <a href="index.html">Ana Sayfa</a> / <a href="games.html">Oyunlar</a> / <span>Elden Ring: Shadow of the Erdtree</span>
+        <a href="index.html">Ana Sayfa</a> /
+        <a href="games.html">Oyunlar</a> /
+        <span>Elden Ring: Shadow of the Erdtree</span>
       </div>
     </div>
   </section>
@@ -71,14 +102,22 @@
       </div>
 
       <!-- Fiyat Geçmişi & Platformlar (Sekmeli) -->
-      <div class="game-price-box mt-3">
+      <div class="game-price-box mt-3 mb-4">
         <h5>Fiyat Geçmişi & Platformlar</h5>
 
         <ul class="nav nav-pills mb-3" id="erPriceTab" role="tablist">
-          <li class="nav-item"><a class="nav-link active" id="er-steam-tab" data-toggle="pill" href="#er-steam" role="tab">Steam</a></li>
-          <li class="nav-item"><a class="nav-link" id="er-xbox-tab" data-toggle="pill" href="#er-xbox" role="tab">Xbox</a></li>
-          <li class="nav-item"><a class="nav-link" id="er-ps-tab" data-toggle="pill" href="#er-ps" role="tab">PlayStation</a></li>
-          <li class="nav-item"><a class="nav-link" id="er-epic-tab" data-toggle="pill" href="#er-epic" role="tab">Epic Games</a></li>
+          <li class="nav-item">
+            <a class="nav-link active" id="er-steam-tab" data-toggle="pill" href="#er-steam" role="tab">Steam</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="er-xbox-tab" data-toggle="pill" href="#er-xbox" role="tab">Xbox</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="er-ps-tab" data-toggle="pill" href="#er-ps" role="tab">PlayStation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="er-epic-tab" data-toggle="pill" href="#er-epic" role="tab">Epic Games</a>
+          </li>
         </ul>
 
         <div class="tab-content" id="erPriceTabContent">
@@ -89,7 +128,8 @@
                 <tr><th scope="row">Bölge</th><td>Türkiye (TL)</td></tr>
                 <tr><th scope="row">Çıkış Fiyatı</th><td>—</td></tr>
                 <tr><th scope="row">Şu Anki Fiyat</th><td>—</td></tr>
-                <tr><th scope="row">En Düşük Fiyat</th>
+                <tr>
+                  <th scope="row">En Düşük Fiyat</th>
                   <td>— <small>(<a href="https://steamdb.info/app/1245620/" target="_blank">SteamDB</a>)</small></td>
                 </tr>
               </tbody>
@@ -124,61 +164,161 @@
           <!-- Epic (Satışta Değil) -->
           <div class="tab-pane fade" id="er-epic" role="tabpanel" aria-labelledby="er-epic-tab">
             <div class="alert alert-secondary mb-2">
-              Bu oyun Epic Games Store’da satışta değil <span class="badge-unavail">Satışta değil</span>
+              Bu oyun Epic Games Store’da satışta değil
+              <span class="badge-unavail">Satışta değil</span>
             </div>
           </div>
         </div>
 
-        <small>Not: Rakamları SteamDB ve ilgili mağaza sayfalarından doldurabilirsin.</small>
+        <small>Not: İstersen rakamları SteamDB ve mağaza sayfalarından kendin doldurabilirsin.</small>
       </div>
 
       <!-- Kapak görseli -->
-      <img src="img/games/eldenringSE.jpg" class="img-fluid rounded mb-4 shadow-hero" alt="Elden Ring: Shadow of the Erdtree">
+      <img src="img/games/eldenringSE.jpg"
+           class="img-fluid rounded mb-4 shadow-hero"
+           alt="Elden Ring: Shadow of the Erdtree kapak görseli">
 
       <!-- Bilgi rozetleri -->
-      <div class="info-badges mb-3">
+      <div class="info-badges mb-4">
         <span>Tür: Aksiyon RPG</span>
         <span>Geliştirici: FromSoftware</span>
-        <span>Platform: PC/PS/Xbox</span>
+        <span>Yayıncı: Bandai Namco</span>
+        <span>Platform: PC / PlayStation / Xbox</span>
       </div>
 
-      <!-- Oynanış Özeti -->
-      <h4>Oynanış Özeti</h4>
-      <p>Devasa açık dünyada zorlu boss savaşları ve özgür keşif sunar. Shadow of the Erdtree genişlemesi yeni bölgeler, düşmanlar ve silahlar ekler.</p>
+      <!-- GENEL BAKIŞ -->
+      <h3>Genel Bakış</h3>
+      <p>
+        Elden Ring, FromSoftware’in açık dünya yapısına sahip ilk büyük soulslike oyunu. Shadow of the Erdtree genişleme
+        paketiyle birlikte hem hikâye hem de oynanış tarafında oyunun evrenini daha da büyüten, oldukça kapsamlı bir içerik
+        sunuyor. Yeni bir bölgeye adım atıyor, farklı düşman tipleri, boss’lar, ekipmanlar ve görev zincirleriyle karşılaşıyoruz.
+      </p>
+      <p>
+        Souls serisini seven oyuncular için Elden Ring; zorluk, keşif ve özgürlük üçlüsünü bir araya getiriyor. Oyuncu, istediği
+        zaman yeni bölgelere dalabiliyor, erkenden güçlü boss’lara meydan okuyabiliyor ya da önce karakterini güçlendirip
+        daha güvenli bir rotayı tercih edebiliyor.
+      </p>
 
-      <!-- Sistem Gereksinimleri -->
-      <h4>Sistem Gereksinimleri</h4>
+      <!-- SHADOW OF THE ERDTREE NELER EKLİYOR? -->
+      <h4>Shadow of the Erdtree Neler Ekliyor?</h4>
+      <p>
+        Genişleme paketi, ana oyundan bağımsız hissedilmeyen ama kendi içinde de bütünlüklü bir hikâye anlatıyor. Yeni harita,
+        ana oyunun bölgeleri kadar detaylı tasarlanmış durumda ve her köşesinde gizli bir boss, kısa bir görev ya da lore parçası
+        bulmak mümkün.
+      </p>
       <ul>
-        <li>İşletim Sistemi: Windows 10/11 64-bit</li>
-        <li>İşlemci: Intel i7-8700K / AMD Ryzen 5 3600X</li>
-        <li>Bellek: 16 GB RAM</li>
-        <li>Ekran Kartı: NVIDIA RTX 2060 / AMD RX 5700 XT</li>
-        <li>Depolama: 60 GB</li>
+        <li>Yeni ana bölge ve çok sayıda alt bölge / zindan</li>
+        <li>Yeni silah türleri, zırh setleri ve büyüler</li>
+        <li>Oyuncuyu daha agresif oynamaya zorlayan, zorlayıcı boss savaşları</li>
+        <li>Mevcut karakterinizi genişlemeye taşıma ve yeni yapılar deneme imkânı</li>
       </ul>
 
-      <!-- Fragman -->
+      <!-- KEŞİF VE OYNANIŞ -->
+      <h4>Açık Dünya, Keşif ve Oynanış Döngüsü</h4>
+      <p>
+        Elden Ring’in en güçlü tarafı, oyuncuyu sürekli merak ettiren açık dünya tasarımı. Bir tepeden başka bir kaleyi
+        gördüğünüzde oraya gitmek için ekranda işaret beklemiyorsunuz; atınıza atlayıp kendiniz yolunuzu buluyorsunuz.
+        Keşif sırasında rastladığınız minik zindanlar, mikro boss’lar ve yan görevler hem karakterinizi güçlendirmeye hem
+        de oyunun evrenini daha iyi anlamaya yardımcı oluyor.
+      </p>
+      <p>
+        Dövüş sistemi klasik FromSoftware çizgisinde: ağır ama tatmin edici animasyonlar, iyi zamanlanmış savunma ve kaçış
+        hamleleri, stamina yönetimi ve saldırı pencerelerini okuma üzerine kurulu. Yakın dövüş, büyü odaklı veya hibrit
+        build’lerle farklı oynanış tarzları oluşturmak mümkün.
+      </p>
+
+      <!-- ÇEVRİMİÇİ OYNANIŞ -->
+      <h4>Çevrim İçi ve Co-op Deneyimi</h4>
+      <p>
+        Hem ana oyun hem de genişleme paketi, diğer oyuncuları dünyanıza çağırarak co-op oynama imkânı sunuyor. Zorlu boss’larda
+        yardım almak, bölgeleri iki veya üç kişi gezmek oyunun zorluk dengesini biraz yumuşatıyor ve özellikle seriyle yeni
+        tanışan oyuncular için iyi bir güvenlik ağı oluşturuyor.
+      </p>
+
+      <!-- KİME ÖNERİLİR? -->
+      <h4>Kime Önerilir?</h4>
+      <ul>
+        <li>Soulslike türüne hâkim olup daha özgür bir açık dünya deneyimi arayan oyunculara,</li>
+        <li>Uzun süre oynanabilecek, detaylı bir aksiyon RPG isteyenlere,</li>
+        <li>Keşif, lore ve çevresel hikâye anlatımını sevenlere,</li>
+        <li>Zorlu boss savaşlarından kaçmayanlara.</li>
+      </ul>
+
+      <!-- ARTILAR / EKSİLER -->
+      <h4>Artılar / Eksiler</h4>
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <div class="requirements-box">
+            <h5>Artılar</h5>
+            <ul>
+              <li>Çok katmanlı, merak uyandıran açık dünya tasarımı</li>
+              <li>Uzun süre oyalayan, çeşitliliği yüksek içerik</li>
+              <li>Shadow of the Erdtree ile güçlenen hikâye ve lore</li>
+              <li>Farklı build’leri destekleyen esnek karakter sistemi</li>
+              <li>Co-op ile daha erişilebilir hale gelen zorluk</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="requirements-box">
+            <h5>Eksiler</h5>
+            <ul>
+              <li>Seriyle yeni tanışanlar için hâlâ sert bir zorluk eğrisi</li>
+              <li>Bölge tasarımında zaman zaman tekrar eden düşman tipleri</li>
+              <li>PC tarafında donanım istemleri ve optimizasyon tartışmaları</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SİSTEM GEREKSİNİMLERİ -->
+      <h4>Sistem Gereksinimleri (PC)</h4>
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <div class="requirements-box">
+            <h5>Minimum</h5>
+            <ul>
+              <li>İşletim Sistemi: Windows 10 64-bit</li>
+              <li>İşlemci: Intel Core i5-8400 / AMD Ryzen 3 3300X</li>
+              <li>Bellek: 12 GB RAM</li>
+              <li>Ekran Kartı: NVIDIA GTX 1060 3 GB / AMD RX 580 4 GB</li>
+              <li>Depolama: 60 GB kullanılabilir alan</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="requirements-box">
+            <h5>Önerilen</h5>
+            <ul>
+              <li>İşletim Sistemi: Windows 10/11 64-bit</li>
+              <li>İşlemci: Intel Core i7-8700K / AMD Ryzen 5 3600X</li>
+              <li>Bellek: 16 GB RAM</li>
+              <li>Ekran Kartı: NVIDIA RTX 2060 / AMD RX 5700 XT</li>
+              <li>Depolama: SSD üzerinde 60 GB boş alan</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- FRAGMAN -->
       <h4>Fragman</h4>
       <div class="embed-responsive embed-responsive-16by9 mb-4">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qLZenOn7WUo" allowfullscreen title="Elden Ring: Shadow of the Erdtree fragman"></iframe>
+        <iframe class="embed-responsive-item"
+                src="https://www.youtube.com/embed/qLZenOn7WUo"
+                allowfullscreen
+                title="Elden Ring: Shadow of the Erdtree fragman"></iframe>
       </div>
 
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (kategorisiz sade sürüm) -->
   <footer class="footer-section">
     <div class="container">
 
-      <a href="index.html" class="footer-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
-
-      <ul class="main-menu footer-menu">
-        <li><a href="index.html">Ana Sayfa</a></li>
-        <li><a href="games.html">Oyunlar</a></li>
-        <li><a href="duyurular.html">Duyurular</a></li>
-        <li><a href="istatistikler.html">İstatistikler</a></li>
-        <li><a href="about.html">Hakkımızda</a></li>
-        <li><a href="contact.html">İletişim</a></li>
-      </ul>
+      <a href="index.html" class="footer-logo">
+        <img src="img/logo.png" alt="OyunTanıtım">
+      </a>
 
       <div class="footer-social d-flex justify-content-center">
         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -202,3 +342,11 @@
   <script src="js/jquery.sticky-sidebar.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    // Epic Games butonundaki tooltip için (Bootstrap)
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+</body>
+</html>
