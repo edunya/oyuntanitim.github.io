@@ -3,51 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hades II oyun detayları, sistem gereksinimleri ve fragman.">
-  <meta name="keywords" content="oyun, tanıtım, inceleme, fragman, sistem gereksinimleri">
-  <title>Hades II</title>
+  <meta name="description" content="Hades II detaylı inceleme, sistem gereksinimleri ve fragman.">
+  <meta name="keywords" content="oyun, tanıtım, inceleme, fragman, sistem gereksinimleri, Hades 2, Hades II">
+  <title>Hades II | OyunTanıtım</title>
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="shortcut icon"/>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="css/slicknav.min.css"/>
+  <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+  <link rel="stylesheet" href="css/magnific-popup.css"/>
+  <link rel="stylesheet" href="css/animate.css"/>
   <link rel="stylesheet" href="css/style.css"/>
+
   <style>
-    .info-badges span{display:inline-block;margin:4px 6px;padding:6px 10px;border:1px solid rgba(255,255,255,.2);border-radius:999px;font-size:12px;color:#ddd}
+    /* Sayfaya özel ufak stiller */
+    .info-badges span{
+      display:inline-block;
+      margin:4px 6px;
+      padding:6px 10px;
+      border:1px solid rgba(255,255,255,.2);
+      border-radius:999px;
+      font-size:12px;
+      color:#ddd;
+    }
     .btn-row{gap:10px}
     .shadow-hero{box-shadow:0 10px 30px rgba(0,0,0,.35)}
+
     /* Platform buton renkleri + disabled hali */
     .site-btn.steam-btn{background:#171a21}
     .site-btn.xbox-btn{background:#107c10}
     .site-btn.ps-btn{background:#003791}
     .site-btn.epic-btn{background:#202020}
-    .site-btn[aria-disabled="true"]{opacity:.55;pointer-events:none;cursor:not-allowed}
+    .site-btn[aria-disabled="true"]{
+      opacity:.55;
+      pointer-events:none;
+      cursor:not-allowed;
+    }
+
     /* Küçük uyarı rozeti */
-    .badge-unavail{display:inline-block;font-size:.75rem;padding:.2rem .5rem;background:#6c757d;border-radius:.35rem;margin-left:.5rem}
+    .badge-unavail{
+      display:inline-block;
+      font-size:.75rem;
+      padding:.2rem .5rem;
+      background:#6c757d;
+      border-radius:.35rem;
+      margin-left:.5rem;
+    }
+
+    /* Sistem gereksinimleri kutuları */
+    .requirements-box{
+      background:rgba(0,0,0,.25);
+      border-radius:12px;
+      padding:15px 18px;
+      margin-bottom:20px;
+    }
+    .requirements-box h5{
+      margin-bottom:8px;
+      font-size:1rem;
+      font-weight:600;
+    }
+    .requirements-box ul{
+      padding-left:18px;
+      margin-bottom:0;
+    }
+
+    /* Bu sayfadaki başlıkları koyu fonda daha okunur yap */
+    .games-single-page h2,
+    .games-single-page h3,
+    .games-single-page h4,
+    .games-single-page h5,
+    .games-single-page h6{
+      color:#ffffff;
+    }
   </style>
 </head>
 <body>
+
+  <!-- HEADER -->
   <header class="header-section">
-    <div class="header-bar-warp d-flex">
-      <a href="index.html" class="site-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
+    <div class="header-bar-warp d-flex" style="padding:10px;">
+      <a href="index.html" class="site-logo">
+        <img src="img/logo.png" alt="OyunTanıtım" style="padding:10px;">
+      </a>
       <nav class="top-nav-area w-100">
         <ul class="main-menu primary-menu">
           <li><a href="index.html">Ana Sayfa</a></li>
-          <li><a href="games.html">Oyunlar</a></li>
+
+          <!-- Oyunlar Dropdown (Sadece kategoriler) -->
+          <li>
+            <a href="#">Oyunlar</a>
+            <ul class="sub-menu">
+              <li><a href="games.html">Tüm Oyunlar</a></li>
+              <li><a href="oyunlar-coop.html">Co-op Oyun Önerileri</a></li>
+              <li><a href="oyunlar-editor.html">Editörün Seçimi</a></li>
+            </ul>
+          </li>
+
           <li><a href="duyurular.html">Duyurular</a></li>
           <li><a href="istatistikler.html">İstatistikler</a></li>
-          <li><a href="about.html">Hakkımızda</a></li>
-          <li><a href="contact.html">İletişim</a></li>
+          <li><a href="hakkinda.html">Hakkımızda</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- SAYFA ÜSTÜ -->
   <section class="page-top-section set-bg" data-setbg="img/page-top-bg/1.jpg">
     <div class="page-info">
       <h2>Hades II</h2>
       <div class="site-breadcrumb">
-        <a href="index.html">Ana Sayfa</a> / <a href="games.html">Oyunlar</a> / <span>Hades II</span>
+        <a href="index.html">Ana Sayfa</a> /
+        <a href="games.html">Oyunlar</a> /
+        <span>Hades II</span>
       </div>
     </div>
   </section>
 
+  <!-- İÇERİK -->
   <section class="games-single-page">
     <div class="container">
 
@@ -63,14 +143,22 @@
       </div>
 
       <!-- Fiyat Geçmişi & Platformlar (Sekmeli) -->
-      <div class="game-price-box mt-3">
+      <div class="game-price-box mt-3 mb-4">
         <h5>Fiyat Geçmişi & Platformlar</h5>
 
         <ul class="nav nav-pills mb-3" id="h2PriceTab" role="tablist">
-          <li class="nav-item"><a class="nav-link active" id="h2-steam-tab" data-toggle="pill" href="#h2-steam" role="tab">Steam</a></li>
-          <li class="nav-item"><a class="nav-link" id="h2-xbox-tab" data-toggle="pill" href="#h2-xbox" role="tab">Xbox</a></li>
-          <li class="nav-item"><a class="nav-link" id="h2-ps-tab" data-toggle="pill" href="#h2-ps" role="tab">PlayStation</a></li>
-          <li class="nav-item"><a class="nav-link" id="h2-epic-tab" data-toggle="pill" href="#h2-epic" role="tab">Epic Games</a></li>
+          <li class="nav-item">
+            <a class="nav-link active" id="h2-steam-tab" data-toggle="pill" href="#h2-steam" role="tab">Steam</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="h2-xbox-tab" data-toggle="pill" href="#h2-xbox" role="tab">Xbox</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="h2-ps-tab" data-toggle="pill" href="#h2-ps" role="tab">PlayStation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="h2-epic-tab" data-toggle="pill" href="#h2-epic" role="tab">Epic Games</a>
+          </li>
         </ul>
 
         <div class="tab-content" id="h2PriceTabContent">
@@ -81,7 +169,8 @@
                 <tr><th scope="row">Bölge</th><td>Türkiye (TL)</td></tr>
                 <tr><th scope="row">Çıkış Fiyatı</th><td>—</td></tr>
                 <tr><th scope="row">Şu Anki Fiyat</th><td>—</td></tr>
-                <tr><th scope="row">En Düşük Fiyat</th>
+                <tr>
+                  <th scope="row">En Düşük Fiyat</th>
                   <td>— <small>(<a href="https://steamdb.info/app/1145350/" target="_blank">SteamDB</a>)</small></td>
                 </tr>
               </tbody>
@@ -92,14 +181,16 @@
           <!-- Xbox (Satışta değil) -->
           <div class="tab-pane fade" id="h2-xbox" role="tabpanel" aria-labelledby="h2-xbox-tab">
             <div class="alert alert-secondary mb-2">
-              Bu oyun Xbox Store’da satışta değil <span class="badge-unavail">Satışta değil</span>
+              Bu oyun Xbox Store’da satışta değil
+              <span class="badge-unavail">Satışta değil</span>
             </div>
           </div>
 
           <!-- PlayStation (Satışta değil) -->
           <div class="tab-pane fade" id="h2-ps" role="tabpanel" aria-labelledby="h2-ps-tab">
             <div class="alert alert-secondary mb-2">
-              Bu oyun PlayStation Store’da satışta değil <span class="badge-unavail">Satışta değil</span>
+              Bu oyun PlayStation Store’da satışta değil
+              <span class="badge-unavail">Satışta değil</span>
             </div>
           </div>
 
@@ -115,44 +206,152 @@
             <a href="https://store.epicgames.com/tr/p/hades-ii" target="_blank" class="site-btn epic-btn btn-sm">Epic Mağazasına Git</a>
           </div>
         </div>
-
-        <small>Not: Rakamları SteamDB ve ilgili mağaza sayfalarından doldurabilirsin.</small>
       </div>
 
-      <img src="img/games/hades2.jpg" class="img-fluid rounded mb-4 shadow-hero" alt="Hades II">
+      <!-- Kapak görseli -->
+      <img src="img/games/hades2.jpg"
+           class="img-fluid rounded mb-4 shadow-hero"
+           alt="Hades II kapak görseli">
 
-      <div class="info-badges mb-3">
-        <span>Tür: Roguelike Aksiyon</span><span>Geliştirici: Supergiant</span><span>Platform: PC</span>
+      <!-- Bilgi rozetleri -->
+      <div class="info-badges mb-4">
+        <span>Tür: Roguelike Aksiyon</span>
+        <span>Geliştirici: Supergiant Games</span>
+        <span>Platform: PC (Erken Erişim)</span>
       </div>
 
-      <h4>Oynanış Özeti</h4>
-      <p>Mitolojik dünyada geçen, tempolu savaşlar ve karakter gelişimiyle öne çıkan roguelike devam oyunu. Sanat tasarımı ve müzikleriyle dikkat çeker.</p>
+      <!-- GENEL BAKIŞ -->
+      <h3>Genel Bakış</h3>
+      <p>
+        Hades II, ilk oyunun koşu tabanlı roguelike yapısını daha da geliştiren, yer altı dünyasında geçen hızlı tempolu
+        bir aksiyon oyunu. Bu kez Zagreus yerine kız kardeşi Melinoë’yi kontrol ediyor, Titan Kronos’a karşı mitolojik
+        bir mücadele veriyoruz.
+      </p>
+      <p>
+        Her koşuda farklı tanrıların lütuflarını (boon) topluyor, silahlarımızı ve büyülerimizi güçlendiriyor ve her ölümden
+        sonra daha güçlü bir şekilde geri dönüyoruz. Sanat tasarımı, diyaloglar ve müzikler yine Supergiant kalitesinde,
+        hatta birçok oyuncuya göre ilk oyunun da üzerine çıkmış durumda.
+      </p>
 
-      <h4>Sistem Gereksinimleri</h4>
+      <!-- OYNANIŞ DÖNGÜSÜ -->
+      <h4>Oynanış Döngüsü ve Roguelike Yapı</h4>
+      <p>
+        Hades II’nin temel döngüsü; yer altı dünyasının farklı bölgelerinde ilerleyip odalar arası seçim yapmak, her odada
+        farklı düşman gruplarıyla savaşmak ve karşılığında kaynak, yükseltme veya yeni güçler elde etmek üzerine kurulu.
+        Oyun, her koşuyu benzersiz hissettirmek için rastgeleleşmiş oda dizilimleri ve değişen boon kombinasyonları kullanıyor.
+      </p>
+      <p>
+        Farklı silah türleri (yakın dövüş odaklı silahlar, menzilli seçenekler, büyü odaklı kombinasyonlar) ile çok farklı
+        oynanış tarzları oluşturmak mümkün. Tanrıların sunduğu güçlendirmeler sayesinde aynı silahla bile her koşuda bambaşka
+        bir build kurabiliyorsunuz.
+      </p>
       <ul>
-        <li>İşletim Sistemi: Windows 10 64-bit</li><li>İşlemci: 2.4 GHz Dual Core</li><li>Bellek: 8 GB RAM</li><li>Ekran Kartı: GeForce GTX 950 / eşdeğeri</li><li>Depolama: 20 GB</li>
+        <li>Her koşuda değişen oda dizilimleri ve düşman türleri,</li>
+        <li>Tanrı boons’ları ile farklı sinerjiler kurma imkânı,</li>
+        <li>Kalıcı gelişim sağlayan üs (hub) yükseltmeleri,</li>
+        <li>Yüksek tekrar oynanabilirlik ve “bir koşu daha” hissi.</li>
       </ul>
 
+      <!-- MİTOLOJİ VE ANLATIM -->
+      <h4>Mitoloji ve Anlatım</h4>
+      <p>
+        Hades II, Yunan mitolojisini yeniden yorumlayarak hem ciddi hem de mizahi anlar barındıran diyaloglarla ilerliyor.
+        Tanrılar ve ölümsüz karakterlerle kurduğunuz ilişkiler, her koşudan sonra değişen diyaloglarla derinleşiyor.
+        Melinoë’nin karakter gelişimi ve Kronos ile olan çatışması, oyunun hikâye tarafını sadece arka plan olmaktan çıkarıp
+        motive edici bir unsur haline getiriyor.
+      </p>
+
+      <!-- KİME ÖNERİLİR? -->
+      <h4>Kime Önerilir?</h4>
+      <ul>
+        <li>Roguelike ve “run-based” oynanış seven oyunculara,</li>
+        <li>Hızlı tempolu ama mekanik derinliği olan aksiyon oyunlarını sevenlere,</li>
+        <li>Yunan mitolojisi ve karakter odaklı anlatımı sevenlere,</li>
+        <li>İlk Hades’i seven ve daha fazlasını isteyen herkese.</li>
+      </ul>
+
+      <!-- ARTILAR / EKSİLER -->
+      <h4>Artılar / Eksiler</h4>
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <div class="requirements-box">
+            <h5>Artılar</h5>
+            <ul>
+              <li>Son derece akıcı ve tatmin edici savaş sistemi</li>
+              <li>Yüksek tekrar oynanabilirlik, her koşuda farklı build’ler</li>
+              <li>Güçlü sanat tasarımı ve müzikler</li>
+              <li>Zengin diyaloglar ve karakter ilişkileri</li>
+              <li>Erken erişim olmasına rağmen oldukça dolu içerik</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="requirements-box">
+            <h5>Eksiler</h5>
+            <ul>
+              <li>Türle yeni tanışanlar için zorlayıcı başlangıç</li>
+              <li>Erken erişim sürecinde denge yamalarına ihtiyaç duyabilir</li>
+              <li>Sürekli deneme-yanılma yapısını sevmeyen oyunculara hitap etmeyebilir</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SİSTEM GEREKSİNİMLERİ -->
+      <h4>Sistem Gereksinimleri (PC)</h4>
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <div class="requirements-box">
+            <h5>Minimum</h5>
+            <ul>
+              <li>İşletim Sistemi: Windows 10 64-bit</li>
+              <li>İşlemci: 2.4 GHz Çift Çekirdek</li>
+              <li>Bellek: 8 GB RAM</li>
+              <li>Ekran Kartı: NVIDIA GeForce GTX 950 veya eşdeğeri</li>
+              <li>Depolama: 20 GB boş alan</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="requirements-box">
+            <h5>Önerilen</h5>
+            <ul>
+              <li>İşletim Sistemi: Windows 10/11 64-bit</li>
+              <li>İşlemci: 3.0 GHz Dört Çekirdek veya üzeri</li>
+              <li>Bellek: 16 GB RAM</li>
+              <li>Ekran Kartı: NVIDIA GTX 1060 / AMD eşdeğeri</li>
+              <li>Depolama: SSD üzerinde 20 GB boş alan</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- FRAGMAN -->
       <h4>Fragman</h4>
       <div class="embed-responsive embed-responsive-16by9 mb-4">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GW9A1fZkJ0w" allowfullscreen title="Hades II fragman"></iframe>
+        <iframe class="embed-responsive-item"
+                src="https://www.youtube.com/watch?v=U8lJRcUeEMs"
+                allowfullscreen
+                title="Hades II fragman"></iframe>
       </div>
+
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (Elden sayfasıyla uyumlu) -->
   <footer class="footer-section">
     <div class="container">
-
-      <a href="index.html" class="footer-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
+      <a href="index.html" class="footer-logo">
+        <img src="img/logo.png" alt="OyunTanıtım">
+      </a>
 
       <ul class="main-menu footer-menu">
         <li><a href="index.html">Ana Sayfa</a></li>
         <li><a href="games.html">Oyunlar</a></li>
         <li><a href="duyurular.html">Duyurular</a></li>
         <li><a href="istatistikler.html">İstatistikler</a></li>
-        <li><a href="about.html">Hakkımızda</a></li>
-        <li><a href="contact.html">İletişim</a></li>
+        <li><a href="hakkinda.html">Hakkımızda</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
       </ul>
 
       <div class="footer-social d-flex justify-content-center">
@@ -165,10 +364,10 @@
       <div class="copyright">
         © 2025 OyunTanıtım | TBL303 Web Tasarımı Dersi Projesi
       </div>
-
     </div>
   </footer>
 
+  <!-- JS -->
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.slicknav.min.js"></script>
@@ -176,4 +375,11 @@
   <script src="js/jquery.sticky-sidebar.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/main.js"></script>
-
+  <script>
+    // Tooltip'ler (özellikle disabled platform butonları için)
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+</body>
+</html>
