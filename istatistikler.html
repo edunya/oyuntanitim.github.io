@@ -1,149 +1,358 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+  <title>OyunTanıtım - İstatistikler</title>
   <meta charset="UTF-8">
+  <meta name="description" content="It Takes Two, Elden Ring, Helldivers II, Hades II ve Split Fiction için özet oyun istatistikleri.">
+  <meta name="keywords" content="oyun istatistikleri, Elden Ring, It Takes Two, Helldivers 2, Hades 2, Split Fiction">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oyun İstatistikleri | OyunTanıtım</title>
 
-  <meta name="description" content="It Takes Two, Elden Ring, Helldivers II, Hades II ve Split Fiction için gerçek oyun istatistikleri.">
-  <meta name="keywords" content="oyun istatistikleri, Elden Ring satış, Helldivers 2 oyuncu sayısı, Hades 2 Metacritic, Split Fiction satış">
+  <link href="img/favicon.ico" rel="shortcut icon"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet"/>
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="css/slicknav.min.css"/>
+  <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+  <link rel="stylesheet" href="css/magnific-popup.css"/>
+  <link rel="stylesheet" href="css/animate.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- Sayfa Yüklenme -->
+  <div id="preloder"><div class="loader"></div></div>
+
+  <!-- Üst Menü -->
   <header class="header-section">
-    <div class="header-bar-warp d-flex">
-      <a href="index.html" class="site-logo">
-        <img src="img/logo.png" alt="OyunTanıtım">
-      </a>
-      <nav class="top-nav-area w-100">
-        <ul class="main-menu primary-menu">
-          <li><a href="index.html">Ana Sayfa</a></li>
-          <li><a href="games.html">Oyunlar</a></li>
-          <li class="active"><a href="istatistikler.html">İstatistikler</a></li>
-          <li><a href="duyurular.html">Duyurular</a></li>
-          <li><a href="about.html">Hakkımızda</a></li>
-          <li><a href="contact.html">İletişim</a></li>
-        </ul>
-      </nav>
+    <div class="header-warp">
+
+      <div class="header-social d-flex justify-content-end">
+        <p>Bizi Takip Et:</p>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
+
+      <div class="header-bar-warp d-flex">
+        <a href="index.html" class="site-logo">
+          <img src="img/logo.png" alt="OyunTanıtım">
+        </a>
+
+        <!-- NAVIGATION -->
+        <nav class="top-nav-area w-100">
+          <ul class="main-menu primary-menu">
+
+            <li><a href="index.html">Ana Sayfa</a></li>
+
+            <!-- Oyunlar Dropdown (Kategoriler) -->
+            <li>
+              <a href="#">Oyunlar</a>
+              <ul class="sub-menu">
+                <li><a href="games.html">Tüm Oyunlar</a></li>
+                <li><a href="oyunlar-coop.html">Co-op Oyun Önerileri</a></li>
+                <li><a href="oyunlar-editor.html">Editörün Seçimi</a></li>
+              </ul>
+            </li>
+
+            <li><a href="duyurular.html">Duyurular</a></li>
+            <li class="active"><a href="istatistikler.html">İstatistikler</a></li>
+            <li><a href="hakkinda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+
+          </ul>
+        </nav>
+
+      </div>
     </div>
   </header>
 
-  <!-- ÜST GÖRSEL / BREADCRUMB -->
+  <!-- Sayfa Üst Görsel -->
   <section class="page-top-section set-bg" data-setbg="img/page-top-bg/1.jpg">
     <div class="page-info">
       <h2>Oyun İstatistikleri</h2>
       <div class="site-breadcrumb">
-        <a href="index.html">Ana Sayfa</a> / <span>İstatistikler</span>
+        <a href="index.html">Ana Sayfa</a> /
+        <span>İstatistikler</span>
       </div>
     </div>
   </section>
 
-  <!-- İSTATİSTİKLER -->
-  <section class="statistics-section py-5">
+  <!-- İSTATİSTİKLER İÇERİK -->
+  <!-- Arka plan: review-section (mor/lacivert degrade)
+       Yazı rengi: .istatistikler-section (style.css'e eklediğin kısım) -->
+  <section class="review-section istatistikler-section py-5">
     <div class="container">
 
-      <div class="text-center mb-4">
-        <h3>Gerçek Oyun Verileri (2024–2025)</h3>
-        <p class="text-muted mb-1">
-          Aşağıdaki sayılar; Metacritic, Steam istatistik siteleri ve resmî haberlerden
-          derlenmiş, yuvarlanmış ve özetlenmiş bilgilerdir.
+      <!-- Başlık -->
+      <div class="section-title text-center mb-4">
+        <h2>Sayılarda Oyun Dünyası</h2>
+        <p class="text-secondary">
+          Bu sayfada; It Takes Two, Elden Ring, Helldivers II, Hades II ve Split Fiction için
+          Metacritic puanları, satış tahminleri ve eş zamanlı oyuncu sayıları özetlenmiştir.
         </p>
-        <small class="text-muted">
-          * Rakamlar yaklaşık değerlerdir ve zaman içinde güncellenebilir.
-        </small>
+        <p class="text-secondary" style="font-size: 13px;">
+          * Tüm rakamlar, 2024–2025 dönemindeki verilerden derlenmiş yaklaşık değerlerdir.
+        </p>
       </div>
 
-      <!-- GRAFİKLER -->
-      <div class="row text-center mb-5">
-        <div class="col-md-4 mb-4">
-          <h5 class="mb-3">Metacritic Puanları</h5>
-          <canvas id="ratingChart"></canvas>
+      <!-- ÖNE ÇIKAN SAYILAR (KPI BLOKLARI) -->
+      <div class="row mb-4">
+        <div class="col-md-3 col-sm-6 mb-3">
+          <div class="p-3 rounded h-100" style="background:rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.10);">
+            <p class="mb-1 text-secondary" style="font-size: 12px; letter-spacing: .5px; text-transform: uppercase;">
+              Toplam İncelenen Oyun
+            </p>
+            <div class="h3 mb-1">5</div>
+            <p class="mb-0 text-secondary" style="font-size: 13px;">
+              Elden Ring, It Takes Two, Helldivers II, Hades II ve Split Fiction.
+            </p>
+          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <h5 class="mb-3">Satış Karşılaştırması (Milyon)</h5>
-          <canvas id="salesChart"></canvas>
+
+        <div class="col-md-3 col-sm-6 mb-3">
+          <div class="p-3 rounded h-100" style="background:rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.10);">
+            <p class="mb-1 text-secondary" style="font-size: 12px; letter-spacing: .5px; text-transform: uppercase;">
+              Ortalama Metacritic
+            </p>
+            <div class="h3 mb-1">≈ 90</div>
+            <p class="mb-0 text-secondary" style="font-size: 13px;">
+              Metacritic puanı olan oyunların ortalaması 80–95 bandında, genel beğeni yüksek.
+            </p>
+          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <h5 class="mb-3">Steam Zirve Oyuncu Sayısı (Bin)</h5>
-          <canvas id="concurrentChart"></canvas>
+
+        <div class="col-md-3 col-sm-6 mb-3">
+          <div class="p-3 rounded h-100" style="background:rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.10);">
+            <p class="mb-1 text-secondary" style="font-size: 12px; letter-spacing: .5px; text-transform: uppercase;">
+              Toplam Satış (Yaklaşık)
+            </p>
+            <div class="h3 mb-1">100M+</div>
+            <p class="mb-0 text-secondary" style="font-size: 13px;">
+              Elden Ring, It Takes Two ve Helldivers II’nin toplam satışları 60M+ bandını geçmiş durumda.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-3">
+          <div class="p-3 rounded h-100" style="background:rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.10);">
+            <p class="mb-1 text-secondary" style="font-size: 12px; letter-spacing: .5px; text-transform: uppercase;">
+              En Yüksek Eş Zamanlı Oyuncu
+            </p>
+            <div class="h3 mb-1">≈ 950K</div>
+            <p class="mb-0 text-secondary" style="font-size: 13px;">
+              Elden Ring, Steam’de 900K+ eş zamanlı oyuncu ile listedeki zirveyi temsil ediyor.
+            </p>
+          </div>
         </div>
       </div>
 
-      <!-- TABLO -->
-      <h4 class="mt-3 mb-3 text-center">Detaylı Oyun Tablosu</h4>
+      <!-- METACRITIC VE SATIŞ / OYUNCU ÖZETİ -->
+      <div class="row mb-5">
+
+        <!-- Metacritic Puanları -->
+        <div class="col-lg-6 mb-4">
+          <h4 class="mb-3">Metacritic Puanları (Yaklaşık)</h4>
+          <p class="text-secondary" style="font-size: 13px;">
+            Aşağıdaki çubuklar, oyunların Metacritic ortalama puanlarını gösteren basit bir görselleştirmedir.
+          </p>
+
+          <ul class="list-unstyled mt-3">
+
+            <li class="mb-3">
+              <div class="d-flex justify-content-between">
+                <span>Elden Ring</span>
+                <span>96 / 100</span>
+              </div>
+              <div class="progress" style="height: 10px;">
+                <div class="progress-bar" role="progressbar"
+                     style="width:96%;" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </li>
+
+            <li class="mb-3">
+              <div class="d-flex justify-content-between">
+                <span>Hades II</span>
+                <span>94–95 / 100</span>
+              </div>
+              <div class="progress" style="height: 10px;">
+                <div class="progress-bar" role="progressbar"
+                     style="width:94%;" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </li>
+
+            <li class="mb-3">
+              <div class="d-flex justify-content-between">
+                <span>It Takes Two</span>
+                <span>88–89 / 100</span>
+              </div>
+              <div class="progress" style="height: 10px;">
+                <div class="progress-bar" role="progressbar"
+                     style="width:89%;" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </li>
+
+            <li class="mb-3">
+              <div class="d-flex justify-content-between">
+                <span>Helldivers II</span>
+                <span>82–83 / 100</span>
+              </div>
+              <div class="progress" style="height: 10px;">
+                <div class="progress-bar" role="progressbar"
+                     style="width:83%;" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </li>
+
+            <li class="mb-1">
+              <div class="d-flex justify-content-between">
+                <span>Split Fiction</span>
+                <span>Örnek: 80 / 100</span>
+              </div>
+              <div class="progress" style="height: 10px;">
+                <div class="progress-bar" role="progressbar"
+                     style="width:80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- Satış & Eş Zamanlı Oyuncu Özet Tablosu -->
+        <div class="col-lg-6 mb-4">
+          <h4 class="mb-3">Satış ve Eş Zamanlı Oyuncu Özetleri</h4>
+          <p class="text-secondary" style="font-size: 13px;">
+            Satış rakamları milyon kopya, eş zamanlı oyuncu değerleri ise Steam’deki zirve sayıları
+            üzerinden yaklaşık olarak verilmiştir.
+          </p>
+
+          <div class="table-responsive mt-3">
+            <table class="table table-dark table-bordered table-striped align-middle">
+              <thead>
+                <tr>
+                  <th>Oyun</th>
+                  <th>Satış (Milyon)</th>
+                  <th>Zirve Eş Zamanlı Oyuncu</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Elden Ring</td>
+                  <td>30M+</td>
+                  <td>≈ 950K</td>
+                </tr>
+                <tr>
+                  <td>It Takes Two</td>
+                  <td>20M+</td>
+                  <td>≈ 71K</td>
+                </tr>
+                <tr>
+                  <td>Helldivers II</td>
+                  <td>19M+</td>
+                  <td>≈ 459K</td>
+                </tr>
+                <tr>
+                  <td>Hades II</td>
+                  <td>—</td>
+                  <td>≈ 113K</td>
+                </tr>
+                <tr>
+                  <td>Split Fiction</td>
+                  <td>4M (örnek)</td>
+                  <td>≈ 50K (örnek)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="mt-2 text-secondary" style="font-size: 13px;">
+            Not: Split Fiction, siteye özel kurgusal bir oyun olduğu için istatistikleri örnek
+            amaçlı eklenmiştir.
+          </p>
+        </div>
+      </div>
+
+      <!-- DETAYLI OYUN TABLOSU -->
+      <h4 class="mb-3 text-center">Detaylı Oyun Özeti</h4>
       <div class="table-responsive mb-4">
         <table class="table table-dark table-striped table-bordered align-middle text-start">
           <thead>
             <tr>
-              <th>Oyun Adı</th>
+              <th>Oyun</th>
               <th>Tür</th>
-              <th>Metacritic (Metascore)</th>
-              <th>Satış (Milyon Kopya)</th>
-              <th>Steam En Yüksek Eş Zamanlı</th>
-              <th>Kısa Not</th>
+              <th>Metacritic*</th>
+              <th>Ortalama Oyun Süresi</th>
+              <th>Co-op</th>
+              <th>Kısa Yorum</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>It Takes Two</td>
-              <td>Kooperatif Macera</td>
-              <td>89</td>
-              <td>20+</td>
-              <td>≈ 71.000</td>
-              <td>2021 çıkışlı, 20M+ satışla hâlâ en popüler co-op oyunlardan biri.</td>
-            </tr>
-            <tr>
               <td>Elden Ring</td>
               <td>Aksiyon RPG</td>
               <td>96</td>
-              <td>30+</td>
-              <td>≈ 950.000+</td>
-              <td>FromSoftware’ın açık dünya RPG’si, 30M+ satış ve dev Steam zirvesiyle hâlâ çok oynanıyor.</td>
+              <td>80+ saat</td>
+              <td>Hayır</td>
+              <td>
+                Açık dünya Soulslike deneyimi; hem satış hem oyuncu sayısında son yılların en güçlü oyunlarından.
+              </td>
+            </tr>
+            <tr>
+              <td>It Takes Two</td>
+              <td>Kooperatif Macera</td>
+              <td>88–89</td>
+              <td>12–15 saat</td>
+              <td>Evet (2 oyuncu)</td>
+              <td>
+                Tamamen co-op odaklı; yaratıcı bulmacalar ve mini oyunlarla öne çıkan güçlü bir hikâye deneyimi.
+              </td>
             </tr>
             <tr>
               <td>Helldivers II</td>
               <td>Kooperatif TPS</td>
-              <td>83</td>
-              <td>19+</td>
-              <td>458.709</td>
-              <td>2024’te sürpriz hit; 2025’te Xbox çıkışıyla toplam eş zamanlı oyuncu sayısı 500K+ seviyelerini gördü.</td>
+              <td>82–83</td>
+              <td>20+ saat</td>
+              <td>Evet (4 oyuncu)</td>
+              <td>
+                2024’te ani bir patlama yapan, &quot;galaktik kampanya&quot; yapısıyla topluluk odaklı co-op aksiyon.
+              </td>
             </tr>
             <tr>
               <td>Hades II</td>
               <td>Roguelike Aksiyon</td>
               <td>94–95</td>
-              <td>—</td>
-              <td>≈ 112.947</td>
-              <td>2025’in en yüksek puanlı oyunlarından; Steam’de “Overwhelmingly Positive”, resmi satış rakamı paylaşılmadı.</td>
+              <td>30+ saat</td>
+              <td>Hayır</td>
+              <td>
+                İlk oyunun sistemlerini genişleten, erken erişim olmasına rağmen yılın en yüksek puanlı oyunlarından.
+              </td>
             </tr>
             <tr>
               <td>Split Fiction</td>
               <td>Kooperatif Macera</td>
-              <td>91</td>
-              <td>4+</td>
-              <td>≈ 259.000</td>
-              <td>2025’te “universal acclaim” aldı; ilk iki günde 1M, Mayıs 2025 itibarıyla 4M+ satışa ulaştı.</td>
+              <td>— (örnek)</td>
+              <td>8–10 saat (örnek)</td>
+              <td>Evet</td>
+              <td>
+                OyunTanıtım projesi kapsamında oluşturulmuş kurgusal bir oyun; istatistikler tasarım amaçlı kurgulanmıştır.
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <!-- KAYNAK NOTU -->
+      <!-- KAYNAK / AÇIKLAMA BLOĞU -->
       <div class="row">
         <div class="col-lg-10 mx-auto">
-          <div class="bg-dark text-white p-3 rounded-3 small">
-            <strong>Kaynak Özeti:</strong><br>
-            Metacritic puanları: <em>metacritic.com</em> listeleri ve oyun sayfaları.  
-            Satış ve eş zamanlı oyuncu sayılarına dair veriler: resmî basın açıklamaları,
-            Steam oyuncu istatistik siteleri ve güvenilir oyun haber kaynakları (GamesRadar,
-            IGN, VGC, Polygon vb.). Rakamlar, sitelerin 2024–2025 verilerinin yuvarlanmış
-            bir özetidir.
+          <div class="p-3 rounded" style="background:rgba(0,0,0,0.55); border:1px solid rgba(255,255,255,0.12); font-size:13px;">
+            <strong>Veri ve Kaynak Notu:</strong><br>
+            Metacritic puanları, ilgili oyunların Metacritic sayfalarından alınan ortalama puanların
+            yuvarlanmış hâlleridir. Satış ve eş zamanlı oyuncu sayıları, oyun haber siteleri ve Steam
+            istatistik sitelerindeki bilgiler baz alınarak yaklaşık değerler hâline getirilmiştir.
+            <br><br>
+            Split Fiction için verilen tüm rakamlar; bu ders projesindeki tasarımı desteklemek amacıyla
+            örnek olarak hazırlanmıştır ve gerçek bir oyuna ait değildir.
           </div>
         </div>
       </div>
@@ -151,145 +360,38 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer class="footer-section">
-    <div class="container text-center">
-      <a href="index.html" class="footer-logo">
-        <img src="img/logo.png" alt="OyunTanıtım">
-      </a>
-
+    <div class="container">
+      <a href="index.html" class="footer-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
       <ul class="main-menu footer-menu">
         <li><a href="index.html">Ana Sayfa</a></li>
         <li><a href="games.html">Oyunlar</a></li>
         <li><a href="duyurular.html">Duyurular</a></li>
         <li><a href="istatistikler.html">İstatistikler</a></li>
-        <li><a href="about.html">Hakkımızda</a></li>
-        <li><a href="contact.html">İletişim</a></li>
+        <li><a href="hakkinda.html">Hakkımızda</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
       </ul>
-
       <div class="footer-social d-flex justify-content-center">
         <a href="#"><i class="fa fa-facebook"></i></a>
         <a href="#"><i class="fa fa-twitter"></i></a>
         <a href="#"><i class="fa fa-instagram"></i></a>
         <a href="#"><i class="fa fa-youtube"></i></a>
       </div>
-
       <div class="copyright">
         © 2025 OyunTanıtım | TBL303 Web Tasarımı Dersi Projesi
       </div>
     </div>
   </footer>
 
-
-  <!-- Chart.js Konfigürasyonu -->
-  <script>
-    // Ortak oyun isimleri
-    const games = ['It Takes Two', 'Elden Ring', 'Helldivers II', 'Hades II', 'Split Fiction'];
-
-    // 1) Metacritic Puanları
-    new Chart(document.getElementById('ratingChart'), {
-      type: 'bar',
-      data: {
-        labels: games,
-        datasets: [{
-          label: 'Metacritic (Metascore)',
-          data: [89, 96, 83, 94, 91],
-          backgroundColor: 'rgba(0, 123, 255, 0.75)'
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            callbacks: {
-              label: function(ctx) {
-                return ctx.parsed.y + ' / 100';
-              }
-            }
-          }
-        },
-        scales: {
-          y: {
-            beginAtZero: true,
-            max: 100,
-            title: { display: true, text: 'Puan' }
-          }
-        }
-      }
-    });
-
-    // 2) Satış Karşılaştırması (Milyon kopya)
-    const salesGames = ['It Takes Two', 'Elden Ring', 'Helldivers II', 'Split Fiction'];
-    const salesData = [20, 30, 19, 4]; // milyon
-
-    new Chart(document.getElementById('salesChart'), {
-      type: 'bar',
-      data: {
-        labels: salesGames,
-        datasets: [{
-          label: 'Satış (Milyon Kopya, Yaklaşık)',
-          data: salesData,
-          backgroundColor: 'rgba(40, 167, 69, 0.75)'
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            callbacks: {
-              label: function(ctx) {
-                return ctx.parsed.y + 'M+ kopya';
-              }
-            }
-          }
-        },
-        scales: {
-          y: {
-            beginAtZero: true,
-            title: { display: true, text: 'Milyon Kopya' }
-          }
-        }
-      }
-    });
-
-    // 3) Steam Eş Zamanlı Zirve (Bin oyuncu)
-    // Değerler bin oyuncu cinsinden (71 bin, 953 bin vb.)
-    const concurrentData = [71, 953, 459, 113, 259];
-
-    new Chart(document.getElementById('concurrentChart'), {
-      type: 'bar',
-      data: {
-        labels: games,
-        datasets: [{
-          label: 'En Yüksek Eş Zamanlı Oyuncu (Bin)',
-          data: concurrentData,
-          backgroundColor: 'rgba(255, 193, 7, 0.85)'
-        }]
-      },
-      options: {
-        indexAxis: 'y',
-        responsive: true,
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            callbacks: {
-              label: function(ctx) {
-                return ctx.parsed.x + 'K oyuncu (yaklaşık)';
-              }
-            }
-          }
-        },
-        scales: {
-          x: {
-            beginAtZero: true,
-            title: { display: true, text: 'Bin Oyuncu' }
-          }
-        }
-      }
-    });
-  </script>
+  <!-- JS (sadece şablon için; ekstra özel JS yok) -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.slicknav.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.sticky-sidebar.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>
